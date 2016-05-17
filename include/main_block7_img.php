@@ -1,0 +1,1 @@
+<img src="/files/cont_img07.jpg" alt="">

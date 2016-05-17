@@ -1,0 +1,14 @@
+.form_error {width:100%; text-align: center; color:red; margin:-20px 0 10px 0; display:none}
+.form_success {width:100%; text-align: center; color:green; margin:-20px 0 10px 0; display:none}
+.wrong_border {border-color:red !important;}
+
+.posRel {position:relative}     
+
+.aboutCompanyMenu {left:2.7%; top:150px; text-transform: uppercase; font-size: 12px; font-family: "MuseoSansCyrl-700"; width:100% ; clear:both}
+.aboutCompanyMenu li {float:left; margin-right:35px; padding:0 0 18px; border-bottom: 2px solid transparent;}
+.aboutCompanyMenu li:hover, .aboutCompanyMenu li.active {border-color:#538960}
+.aboutCompanyMenu li a {color:#6b6b6b}
+.aboutCompanyMenu li a:hover, .aboutCompanyMenu li.active, .aboutCompanyMenu li:hover a {color:#538960}
+
+.aboutContentWrapper {padding:45px 2.7%; border-top:1px solid #e1e0de;}
+.profile .item_info__description{height:120px;overflow:hidden;}
