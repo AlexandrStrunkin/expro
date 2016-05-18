@@ -166,7 +166,7 @@
                     <label class="dealer-new"><input type="text" class="input req" placeholder="Фактический адрес" value="" name="NEW_FACT_ADDRESS" autocomplete="off"/></label>
                     <label class="dealer-new"><input type="text" class="input req phone" placeholder="Телефон контактного лица для связи" value="" name="NEW_PHONE" autocomplete="off"/></label>
                     <label class="dealer-new"><input type="text" class="input req" placeholder="Введите название вашей организации" value="" name="NEW_NAME" autocomplete="off"/></label>
-                    <label class="dealer-new"><input type="text" class="input" placeholder="Адрес склада" value="" name="NEW_WAREHOUSE" autocomplete="off"/></label>
+                    <label class="dealer-new"><input type="text" class="input" placeholder="Адрес склада (при наличии)" value="" name="NEW_WAREHOUSE" autocomplete="off"/></label>
                     <label class="dealer-2"><input type="text" class="input req" placeholder="Ваши ФИО" value="" name="FIO" autocomplete="off"/></label>
                     <label class="dealer-2"><input type="text" class="input email req" placeholder="E-mail для связи" value="" name="EMAIL" autocomplete="off"/></label>
                 </div>

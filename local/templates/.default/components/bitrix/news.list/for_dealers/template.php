@@ -72,7 +72,7 @@
                     <input type="text" class="req input" placeholder="Фактический адрес" value="" name="NEW_FACT_ADDRESS" autocomplete="off"/><span class="i">*</span>
                 </label>
                 <label class="right">
-                    <input type="text" class="req input" placeholder="Адрес склада" value="" name="NEW_WAREHOUSE" autocomplete="off"/>
+                    <input type="text" class="req input" placeholder="Адрес склада (при наличии)" value="" name="NEW_WAREHOUSE" autocomplete="off"/>
                 </label>
                 <label class="left">
                     <input type="text" class="input" placeholder="Адрес сайта" value="" name="NEW_SITE" autocomplete="off"/><span class="i">*</span>
