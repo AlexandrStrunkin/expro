@@ -1,0 +1,67 @@
+.bx_news_detail {}
+.bx_news_detail{
+    font-size: 80%;
+}
+.bx_news_detail h3{margin-top:20px;margin-bottom:10px}
+
+.bx_news_detail p{margin:0 0 10px}
+
+.bx_news_detail .date {
+    color: #8f8f8f;
+    display: inline-block;
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+.bx_news_detail h2 a:link {
+    color: #0073a3;
+    font-size: 16px;
+}
+.bx_news_detail a {
+    color: #0073a3;
+    cursor: pointer;
+}
+
+.bx_news_detail h2{
+    color:inherit;
+    font-weight:500;
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height:1.1;
+}
+
+.bx_news_detail table tr td {
+    border: 1px solid #d3d3d3;
+    padding: 3px;
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+
+.catalog-seria .area4 a > span {margin-right:10px !important;}
+.item_info__parametrs_more > div {overflow:hidden; height:250px;}
+.item_info__parametrs_more-colors {margin:0 15px 0 0}
+.catalog-seria .area1 a {position:relative; background: #fff; border-radius:3px; border:1px solid #fff}
+.catalog-seria .area1 a:hover {border:1px solid #819e84}
+.catalog-seria .area1 a img {height: auto !important; position:absolute; margin: auto; left:0; right:0; top:0; bottom:0; padding:0 !important; border:0 !important}
+.catalog-seria .area1 a img:hover {border:0;}
+.catalog_wrapper {padding: 0 !important;}
+.catalog-seria { background: #f1f0ee !important;}
+.orderProject, .orderProject:hover {
+    width: 200px;
+    height: 50px;
+    display: block;
+    font: 11px/50px "MuseoSansCyrl-700", sans-serif;
+    letter-spacing: 0.1px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 3px;
+    float: left;
+    border: none;
+    background: #4f4f4f;
+    color: #fff;
+    margin:20px 0 0;
+}
+#order-project .submit {
+    float: none !important;
+    margin:0 auto !important;
+}
