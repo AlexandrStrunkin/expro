@@ -1,11 +1,10 @@
 <?   
     CModule::IncludeModule("iblock");
-    
-    define("INFO_IBLOCK_ID", 25); //инфоблок "информация"
-    
-    
 
-    function arshow($array, $adminCheck = false){
+    define("INFO_IBLOCK_ID", 25); //РёРЅС„РѕР±Р»РѕРє "РёРЅС„РѕСЂРјР°С†РёСЏ"  
+    define("CATALOG_IBLOCK_ID", 6); //РёРЅС„РѕР±Р»РѕРє "РєР°С‚Р°Р»РѕРі" 
+
+    function arshow($array, $adminCheck = false) {
         global $USER;
         $USER = new Cuser;
         if ($adminCheck) {
@@ -16,46 +15,41 @@
         echo "<pre>";
         print_r($array);
         echo "</pre>";
-    }
+    }                                            
 
-
-
-    //get top parents
-    function getTopParent($id){
-        if ($id) {
-            $tt = CIBlockSection::GetList(array(), array('ID'=>$id));
-            $as=$tt->Fetch();
+    //РїРѕР»СѓС‡РµРЅРёРµ СЂР°Р·РґРµР»Р°-СЂРѕРґРёС‚РµР»СЏ РїРµСЂРІРѕРіРѕ СѓСЂРѕРІРЅСЏ
+    //$id - ID СЂР°Р·РґРµР»Р°
+    function getTopParent($id) {
+        if (intval($id) > 0) {
+            $rsSection = CIBlockSection::GetList(array(), array('ID' => $id));
+            $arSection = $rsSection->Fetch();
             static $a;
-            if($as['DEPTH_LEVEL']==1) {$a = $as;}
-            else{         
-                getTopParent($as['IBLOCK_SECTION_ID']);
+            if($arSection['DEPTH_LEVEL'] == 1) {
+                $a = $arSection;
+            } else {         
+                getTopParent($arSection['IBLOCK_SECTION_ID']);
             }
             return $a;
+        } else {
+            return false;
         }
-        else 
-            return "";
-    }
+    }         
 
-
-
-    //функция генерации символьного кода для элементов каталога 
-    //$name - имя товара, $num - постфикс, если ноль, то ничего не прибавляем, если > 0, то дописываем его к имени: имя_$num
+    //С„СѓРЅРєС†РёСЏ РіРµРЅРµСЂР°С†РёРё СЃРёРјРІРѕР»СЊРЅРѕРіРѕ РєРѕРґР° РґР»СЏ СЌР»РµРјРµРЅС‚РѕРІ РєР°С‚Р°Р»РѕРіР° 
+    //$name - РёРјСЏ С‚РѕРІР°СЂР°, $num - РїРѕСЃС‚С„РёРєСЃ, РµСЃР»Рё РЅРѕР»СЊ, С‚Рѕ РЅРёС‡РµРіРѕ РЅРµ РїСЂРёР±Р°РІР»СЏРµРј, РµСЃР»Рё > 0, С‚Рѕ РґРѕРїРёСЃС‹РІР°РµРј РµРіРѕ Рє РёРјРµРЅРё: РёРјСЏ_$num
     function getSymbolCode($name,$num=0) {             
-        //генерим символьный код
+        //РіРµРЅРµСЂРёРј СЃРёРјРІРѕР»СЊРЅС‹Р№ РєРѕРґ
         if ($num <= 0) {
             $code = Cutil::translit($name, "ru", array());
-        }           
-        else  {
-            $code = Cutil::translit($name, "ru", array())."_".$num;
+        } else {
+            $code = Cutil::translit($name, "ru", array()) . "_" . $num;
         }            
 
-        //проверяем существование элемента в каталоге
-        $el = CIBlockElement::GetList(array(), array("IBLOCK_ID"=>23,"CODE"=>$code),false, false, array("ID"));
-        //если элемент с текущим символьным кодом существует, то вызываем функцию еще раз, добавив к символьному коду единицу 
-
+        //РїСЂРѕРІРµСЂСЏРµРј СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёРµ СЌР»РµРјРµРЅС‚Р° РІ РєР°С‚Р°Р»РѕРіРµ
+        $el = CIBlockElement::GetList(array(), array("IBLOCK_ID"=> CATALOG_IBLOCK_ID ,"CODE" => $code),false, false, array("ID"));
+        //РµСЃР»Рё СЌР»РµРјРµРЅС‚ СЃ С‚РµРєСѓС‰РёРј СЃРёРјРІРѕР»СЊРЅС‹Рј РєРѕРґРѕРј СЃСѓС‰РµСЃС‚РІСѓРµС‚, С‚Рѕ РІС‹Р·С‹РІР°РµРј С„СѓРЅРєС†РёСЋ РµС‰Рµ СЂР°Р·, РґРѕР±Р°РІРёРІ Рє СЃРёРјРІРѕР»СЊРЅРѕРјСѓ РєРѕРґСѓ РµРґРёРЅРёС†Сѓ 
         if ($el->SelectedRowsCount() > 0) {
-            //  echo "count: ".$el->SelectedRowsCount()."<br>";    
-            $code = getSymbolCode($name,$num+1);   
+            $code = getSymbolCode($name, $num + 1);   
         }       
 
         return $code;
