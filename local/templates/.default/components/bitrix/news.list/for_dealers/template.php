@@ -15,7 +15,7 @@
 
 <div class="dialer">
     <div class="advantages">
-        <h3>РџСЂРµРёРјСѓС‰РµСЃС‚РІР° СЂР°Р±РѕС‚С‹ СЃ РЅР°РјРё</h3>
+        <h3>Преимущества работы с нами</h3>
         <ul>
             <?foreach($arResult["ITEMS"] as $arItem):?>
                 <?
@@ -34,61 +34,61 @@
 
 
     <div class="become-dealer">
-        <h3>РљР°Рє СЃС‚Р°С‚СЊ РґРёР»РµСЂРѕРј</h3>
+        <h3>Как стать дилером</h3>
         <div class="become-dealer-block1">
             <ol>
-                <li>Р—Р°РїРѕР»РЅРёС‚Рµ Р·Р°СЏРІРєСѓ.</li>
-                <li>Р’ С‚РµС‡РµРЅРёРµ <span>РѕРґРЅРѕРіРѕ СЂР°Р±РѕС‡РµРіРѕ РґРЅСЏ</span> СЃ Р’Р°РјРё СЃРІСЏР¶РµС‚СЃСЏ РЅР°С€ <br /> РјРµРЅРµРґР¶РµСЂ.</li>
-                <li>Р’С‹ РїРѕР»СѓС‡РёС‚Рµ:</li>
+                <li>Заполните заявку.</li>
+                <li>В течение <span>одного рабочего дня</span> с Вами свяжется наш <br /> менеджер.</li>
+                <li>Вы получите:</li>
             </ol>
             <ul>
-                <li>РћРїС‚РѕРІС‹Рµ РїСЂР°Р№СЃ-Р»РёСЃС‚С‹ РЅР°С€РµР№ РїСЂРѕРґСѓРєС†РёРё</li>
-                <li>РЈСЃР»РѕРІРёСЏ СЂР°Р±РѕС‚С‹ Рё РѕР±СЂР°Р·С†С‹ РЅРµРѕР±С…РѕРґРёРјРѕР№ РґРѕРєСѓРјРµРЅС‚Р°С†РёРё</li>
-                <li>РњР°С‚РµСЂРёР°Р»С‹ РґР»СЏ СЂР°Р·РјРµС‰РµРЅРёСЏ РЅР° СЃР°Р№С‚Рµ</li>
-                <li>РРЅСЃС‚СЂСѓРєС†РёРё РґР»СЏ СЃР±РѕСЂРєРё</li>
-                <li>РўРµС…РЅРёС‡РµСЃРєСѓСЋ РёРЅС„РѕСЂРјР°С†РёСЋ РґР»СЏ СѓС‡Р°СЃС‚РёСЏ РІ С‚РµРЅРґРµСЂР°С…</li>
-                <li>РљР°С‚Р°Р»РѕРіРё, Р±СѓРєР»РµС‚С‹ Рё РґСЂСѓРіРёРµ СЂРµРєР»Р°РјРЅС‹Рµ РјР°С‚РµСЂРёР°Р»С‹</li>
-                <li>РќР°С€Сѓ РїРѕРґРґРµСЂР¶РєСѓ Рё РІРЅРёРјР°РЅРёРµ</li>
+                <li>Оптовые прайс-листы нашей продукции</li>
+                <li>Условия работы и образцы необходимой документации</li>
+                <li>Материалы для размещения на сайте</li>
+                <li>Инструкции для сборки</li>
+                <li>Техническую информацию для участия в тендерах</li>
+                <li>Каталоги, буклеты и другие рекламные материалы</li>
+                <li>Нашу поддержку и внимание</li>
             </ul>
         </div>
         <div class="become-dealer-block2">
-            <h3>РћС„РѕСЂРјР»РµРЅРёРµ Р·Р°СЏРІРєРё</h3>
+            <h3>Оформление заявки</h3>
 
             <form action="#" method="post" class="allform" id="regForm">
                 <div class="form_error"></div>
-                <div class="form_success">Р’Р°С€Р° Р·Р°СЏРІРєР° РѕС‚РїСЂР°РІР»РµРЅР°. РњС‹ РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ СЃРІСЏР¶РµРјСЃСЏ СЃ РІР°РјРё! РЎРїР°СЃРёР±Рѕ!</div>
+                <div class="form_success">Ваша заявка отправлена. Мы обязательно свяжемся с вами! Спасибо!</div>
                 <input type="hidden" name="form" value="regForm">    
                 <input type="hidden" id="newDealer" value="Y" name="newDealer">               
                 <label class="left">
-                    <input type="text" class="req input" placeholder="Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ РІР°С€РµР№ РѕСЂРіР°РЅРёР·Р°С†РёРё" value="" name="NEW_NAME" autocomplete="off"/><span class="i">*</span>
+                    <input type="text" class="req input" placeholder="Введите название вашей организации" value="" name="NEW_NAME" autocomplete="off"/><span class="i">*</span>
                 </label>
                 <label class="right">
-                    <input type="text" class="req input" placeholder="Р®СЂРёРґРёС‡РµСЃРєРёР№ Р°РґСЂРµСЃ" value="" name="NEW_LEGAL_ADDRESS" autocomplete="off"/><span class="i">*</span>
+                    <input type="text" class="req input" placeholder="Юридический адрес" value="" name="NEW_LEGAL_ADDRESS" autocomplete="off"/><span class="i">*</span>
                 </label>
                 <label class="center">
-                    <input type="text" class="input" placeholder="Р’РІРµРґРёС‚Рµ Р±Р°РЅРєРѕРІСЃРєРёРµ СЂРµРІРєРёР·РёС‚С‹ РІР°С€РµР№ РѕСЂРіР°РЅРёР·Р°С†РёРё" value="" name="NEW_BANK_PROPS" autocomplete="off"/>
+                    <input type="text" class="input" placeholder="Введите банковские ревкизиты вашей организации" value="" name="NEW_BANK_PROPS" autocomplete="off"/>
                 </label>
                 <label class="left">
-                    <input type="text" class="req input" placeholder="Р¤Р°РєС‚РёС‡РµСЃРєРёР№ Р°РґСЂРµСЃ" value="" name="NEW_FACT_ADDRESS" autocomplete="off"/><span class="i">*</span>
+                    <input type="text" class="req input" placeholder="Фактический адрес" value="" name="NEW_FACT_ADDRESS" autocomplete="off"/><span class="i">*</span>
                 </label>
                 <label class="right">
-                    <input type="text" class="req input" placeholder="РђРґСЂРµСЃ СЃРєР»Р°РґР° (РїСЂРё РЅР°Р»РёС‡РёРё)" value="" name="NEW_WAREHOUSE" autocomplete="off"/>
+                    <input type="text" class="req input" placeholder="Адрес склада (при наличии)" value="" name="NEW_WAREHOUSE" autocomplete="off"/>
                 </label>
                 <label class="left">
-                    <input type="text" class="input" placeholder="РђРґСЂРµСЃ СЃР°Р№С‚Р°" value="" name="NEW_SITE" autocomplete="off"/><span class="i">*</span>
+                    <input type="text" class="input" placeholder="Адрес сайта" value="" name="NEW_SITE" autocomplete="off"/><span class="i">*</span>
                 </label>
                 <label class="right">
-                    <input type="text" class="req input" placeholder="Р¤РРћ РєРѕРЅС‚Р°РєС‚РЅРѕРіРѕ Р»РёС†Р°" value="" name="NEW_FIO" autocomplete="off"/><span class="i">*</span>
+                    <input type="text" class="req input" placeholder="ФИО контактного лица" value="" name="NEW_FIO" autocomplete="off"/><span class="i">*</span>
                 </label>
                 <label class="left">
-                    <input type="text" class="phone input" placeholder="РўРµР»РµС„РѕРЅ РєРѕРЅС‚Р°РєС‚РЅРѕРіРѕ Р»РёС†Р° РґР»СЏ СЃРІСЏР·Рё" value="" name="NEW_PHONE" autocomplete="off"/><span class="i">*</span>
+                    <input type="text" class="phone input" placeholder="Телефон контактного лица для связи" value="" name="NEW_PHONE" autocomplete="off"/><span class="i">*</span>
                 </label>
                 <label class="right">
-                    <input type="text" class="req input" placeholder="E-mail РєРѕРЅС‚Р°РєС‚РЅРѕРіРѕ Р»РёС†Р° РґР»СЏ СЃРІСЏР·Рё" value="" name="NEW_EMAIL" autocomplete="off"/><span class="i">*</span>
+                    <input type="text" class="req input" placeholder="E-mail контактного лица для связи" value="" name="NEW_EMAIL" autocomplete="off"/><span class="i">*</span>
                 </label>
-                <div class="mes">РћС‚РјРµС‡РµРЅРЅС‹Рµ РїРѕР»СЏ, РѕР±СЏР·Р°С‚РµР»СЊРЅС‹ РґР»СЏ Р·Р°РїРѕР»РЅРµРЅРёСЏ</div>
-                <button type="button" class="submit" onclick="personalFormSubmit('regForm')">РћС‚РїСЂР°РІРёС‚СЊ</button>
-                <button type="reset" class="reset">РћС‡РёСЃС‚РёС‚СЊ</button>
+                <div class="mes">Отмеченные поля, обязательны для заполнения</div>
+                <button type="button" class="submit" onclick="personalFormSubmit('regForm')">Отправить</button>
+                <button type="reset" class="reset">Очистить</button>
             </form>
         </div>
     </div>
