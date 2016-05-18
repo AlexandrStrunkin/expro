@@ -13,27 +13,27 @@
     $this->setFrameMode(true);
 ?>
 
- <div class="dialer">
-<div class="advantages">
-    <h3>Преимущества работы с нами</h3>
-    <ul>
-        <?foreach($arResult["ITEMS"] as $arItem):?>
-            <?
-                $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
-                $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
-            ?>              
-            <li id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-                <div class="img"><img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="" /></div>
-                <div class="title">
-                    <?=$arItem["NAME"]?>
-                </div>
-            </li>
-            <?endforeach;?>
-    </ul>
- </div>
- 
- 
- <div class="become-dealer">
+<div class="dialer">
+    <div class="advantages">
+        <h3>Преимущества работы с нами</h3>
+        <ul>
+            <?foreach($arResult["ITEMS"] as $arItem):?>
+                <?
+                    $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
+                    $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
+                ?>              
+                <li id="<?=$this->GetEditAreaId($arItem['ID']);?>">
+                    <div class="img"><img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="" /></div>
+                    <div class="title">
+                        <?=$arItem["NAME"]?>
+                    </div>
+                </li>
+                <?endforeach;?>
+        </ul>
+    </div>
+
+
+    <div class="become-dealer">
         <h3>Как стать дилером</h3>
         <div class="become-dealer-block1">
             <ol>
@@ -53,7 +53,7 @@
         </div>
         <div class="become-dealer-block2">
             <h3>Оформление заявки</h3>
-            
+
             <form action="#" method="post" class="allform" id="regForm">
                 <div class="form_error"></div>
                 <div class="form_success">Ваша заявка отправлена. Мы обязательно свяжемся с вами! Спасибо!</div>
@@ -93,8 +93,4 @@
         </div>
     </div>
 
-    </div>
-   
-        
-
-
+</div>   

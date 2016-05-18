@@ -72,7 +72,7 @@
 
             <li>
                 <?  //показываем ссылку на раздел, если в инфоблоке есть активные на данный момент элементы
-                    $res = CIBlockElement::GetList(Array(), Array("IBLOCK_ID" => 25, "ACTIVE_DATE" => "Y", "ACTIVE" => "Y"), false, Array("nPageSize" => 1), $arSelect);
+                    $res = CIBlockElement::GetList(Array(), Array("IBLOCK_ID" => INFO_IBLOCK_ID, "ACTIVE_DATE" => "Y", "ACTIVE" => "Y"), false, Array("nPageSize" => 1), $arSelect);
                     if ($res -> GetNextElement()) {
                         $APPLICATION->IncludeFile(SITE_DIR."include/footer_menu_link_info.php",Array(), Array("MODE"=>"html"));
                     }
@@ -98,7 +98,6 @@
             </p>
         </div>
         <div class="footer_link">
-            <?/*<a href="#">Старая версия</a>*/?>
             <span>Создание сайта — <a href="http://webgk.ru" target="_blank">компания WebGK</a></span>
         </div>
     </div>
@@ -107,8 +106,7 @@
 
 
 <div class="hidden">
-    <?/*<a href="#login-popup" class="login-popup-link"></a>
-    <a href="#reg-popup" class="reg-popup-link"></a> */?>
+   
     <!--login-popup-->
     <div id="login-popup" class="popupForm">
         <span class="h2">Авторизация</span>           
@@ -117,14 +115,11 @@
             <div class="form_error">Неверный логин или пароль!</div>
             <label><input type="text" class="req input" placeholder="Имя пользователя или e-mail" value="" id="auth_email" autocomplete="off"/></label>
             <label><input type="password" class="req input" placeholder="Пароль" value="" id="auth_password" autocomplete="off"/></label>
-            <?/*<a href="#" class="forgot-pass">Напомнить пароль</a> */?>
 
             <div class="btn-container">
                 <a href="#reg-popup" class="reg-popup-link">регистрация</a>
                 <button type="button" class="submit" onclick="personalFormSubmit('authForm')">войти</button>
-            </div>
-
-
+            </div>        
 
         </form>
     </div>
@@ -215,8 +210,8 @@
             </div> 
         </form>
     </div>
-    
-    
+
+
     <div id="get-opp-price" class="popupForm">
         <span class="h2">Узнать оптовую цену</span>           
         <form action="#" method="post" class="allform" id="getOptPrice">
@@ -228,7 +223,7 @@
             <label><input type="text" class="req input" placeholder="*Ваше имя" value="" name="NAME" autocomplete="off"/></label>
             <label><input type="text" class="req input phone" placeholder="*Ваш телефон" value="" name="PHONE" autocomplete="off"/></label>
             <label><input type="text" class="req input" placeholder="*Ваш Email" value="" name="EMAIL" autocomplete="off"/></label>
-            
+
             <div class="btn-container">
                 <button type="button" class="submit" onclick="personalFormSubmit('getOptPrice')">Отправить</button>
             </div> 

@@ -1,6 +1,8 @@
 <?   
     CModule::IncludeModule("iblock");
     
+    define("INFO_IBLOCK_ID", 25); //инфоблок "информация"
+    
     
 
     function arshow($array, $adminCheck = false){
