@@ -151,7 +151,6 @@
     <div class="main_link">
         <a href="#" class="main_link1"><span>Офисная мебель</span></a>
         <a href="http://hoteldsn.ru/" class="main_link2"><span>Гостиничная мебель</span></a>
-        <!--<a href="/contacts/where_buy/" class="main_link3"><span>Узнайте, где можно купить в вашем регионе</span></a>-->
     </div>       
 
     <?$APPLICATION->IncludeComponent(
