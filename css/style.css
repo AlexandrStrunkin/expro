@@ -94,7 +94,7 @@ textarea {
 
 .header__wrapper {
     padding: 72px 3.1% 0;
-    overflow: hidden;
+    /*overflow: hidden;*/
     position:relative;
     height:65px;     
 }
@@ -145,13 +145,13 @@ textarea {
 .header__wrapper__contacts_language {
     float: right;
     padding: 9px 0;
-    position:absolute;
+    /*position:absolute;*/
     right:0;
 }
 
 .header__wrapper__contacts {
     float: left;
-    margin-right: 66px;
+    /*margin-right: 66px;*/
     margin-top:-15px
 }
 
@@ -220,6 +220,7 @@ textarea {
     text-align: center;
     margin: 0 auto 37px;
     overflow: hidden;
+    position:relative;
 }
 
 .main_link a {
@@ -4577,5 +4578,22 @@ font-family: 'AngleciaProDisplayItalic';
     position: absolute;
     top: 0;
     width: 13px;
+}
+
+.main_link3 {
+    position:absolute;
+    width:auto;
+    width:310px !important;
+    right:3.1%;
+    border-bottom: 1px solid
+}
+
+.where_buy_header {
+    margin: 3px 0 0;
+}
+
+.where_buy_header span{
+    border-bottom: 1px solid #b4d1be;
+    padding-bottom: 3px;
 }
 

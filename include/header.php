@@ -109,7 +109,7 @@
                     $name = substr($name, 0, 12).'...';
             ?>
             <div class="header__wrapper__buttons" >
-            
+
                 <div class="private_office1 btn_ico"><a href="/personal/"  style="width:130px"><?=htmlspecialcharsbx($name)?></a> <a class="logout" href="?logout=yes">Выйти</a></div>    
                 <a class="client" href="http://market.expro.ru">Для розничных покупателей</a>
             </div>
@@ -128,6 +128,10 @@
                 <span class="topphone">
                     <?$APPLICATION->IncludeFile(SITE_DIR."include/top_phone.php",Array(), Array("MODE"=>"html"));?>
                 </span>
+                <div class="where_buy_header">
+                    <a href="/contacts/where_buy/" ><span>Узнайте, где можно купить в вашем регионе</span></a>
+                </div>
+
             </div>
 
             <div class="header__wrapper__language">
@@ -147,26 +151,27 @@
     <div class="main_link">
         <a href="#" class="main_link1"><span>Офисная мебель</span></a>
         <a href="http://hoteldsn.ru/" class="main_link2"><span>Гостиничная мебель</span></a>
+        <!--<a href="/contacts/where_buy/" class="main_link3"><span>Узнайте, где можно купить в вашем регионе</span></a>-->
     </div>       
 
     <?$APPLICATION->IncludeComponent(
-	"bitrix:menu", 
-	"top_menu", 
-	array(
-		"ROOT_MENU_TYPE" => "top",
-		"MENU_CACHE_TYPE" => "Y",
-		"MENU_CACHE_TIME" => "36000000",
-		"MENU_CACHE_USE_GROUPS" => "N",
-		"MENU_CACHE_GET_VARS" => array(
-		),
-		"MAX_LEVEL" => "3",
-		"USE_EXT" => "N",
-		"ALLOW_MULTI_SELECT" => "N",
-		"COMPONENT_TEMPLATE" => "top_menu",
-		"CHILD_MENU_TYPE" => "submenu",
-		"DELAY" => "N"
-	),
-	false
-);?>
-    
+            "bitrix:menu", 
+            "top_menu", 
+            array(
+                "ROOT_MENU_TYPE" => "top",
+                "MENU_CACHE_TYPE" => "Y",
+                "MENU_CACHE_TIME" => "36000000",
+                "MENU_CACHE_USE_GROUPS" => "N",
+                "MENU_CACHE_GET_VARS" => array(
+                ),
+                "MAX_LEVEL" => "3",
+                "USE_EXT" => "N",
+                "ALLOW_MULTI_SELECT" => "N",
+                "COMPONENT_TEMPLATE" => "top_menu",
+                "CHILD_MENU_TYPE" => "submenu",
+                "DELAY" => "N"
+            ),
+            false
+        );?>
+
 </header>
