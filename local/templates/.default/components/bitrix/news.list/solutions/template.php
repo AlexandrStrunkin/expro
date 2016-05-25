@@ -62,7 +62,7 @@
 
         </ul>
 
-    </div>
+    </div>   
 
     <div class="become-dealer-block2">
 
@@ -84,8 +84,8 @@
             </label>
             <label class="right">
                 <input type="text" class="req input" placeholder="E-mail контактного лица для связи" value="" name="CONTACT_EMAIL"/><span class="i">*</span>
-            </label>
-            <button type="button" class="submit" onclick="personalFormSubmit('feedBack'); yaCounter32903175.reachGoal('SVYAZHITES'); _gaq.push(['_trackEvent', 'Button', 'Click', 'SVYAZHITES']);">Отправить</button>
+            </label>                                                                                                                 
+            <button type="button" class="submit" onclick="personalFormSubmit('feedBack'); yaCounter32903175.reachGoal('SVYAZHITES'); ga('send', 'event', 'Button', 'Click', 'SVYAZHITES');">Отправить</button>
             <button type="reset" class="reset">Очистить</button>
         </form>
     </div>
