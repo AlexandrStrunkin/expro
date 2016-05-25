@@ -168,7 +168,7 @@
             <div class="btn-container">
                 <div class="mes">Отмеченные поля, являются обязательными для заполнения.</div>
                 <button type="reset" class="reset">очистить</button>
-                <button type="button" class="submit" onclick="personalFormSubmit('regForm')">отправить</button>
+                <button type="button" class="submit" onclick="personalFormSubmit('regForm'); yaCounter32903175.reachGoal('REGISTRACIYA'); _gaq.push(['_trackEvent', 'Button', 'Click', 'REGISTRACIYA']);">отправить</button>
             </div>    
         </form>
 
@@ -189,7 +189,7 @@
             <label><input type="text" class="req input" placeholder="*Email контактного лица" value="" name="EMAIL" autocomplete="off"/></label>
 
             <div class="btn-container">
-                <button type="button" class="submit" onclick="personalFormSubmit('orderProject')">Заказать</button>
+                <button type="button" class="submit" onclick="personalFormSubmit('orderProject'); yaCounter32903175.reachGoal('PROEKT'); _gaq.push(['_trackEvent', 'Button', 'Click', 'PROEKT']);">Заказать</button>
             </div> 
         </form>
     </div>
@@ -205,7 +205,7 @@
             <label><input type="text" class="req input phone" placeholder="*Ваш телефон" value="" name="PHONE" autocomplete="off"/></label>
             <label><textarea placeholder="Ваши комментарии или вопросы" name="COMMENT" autocomplete="off"></textarea></label>                
             <div class="btn-container">
-                <button type="button" class="submit" onclick="personalFormSubmit('orderCall')">Заказать</button>
+                <button type="button" class="submit" onclick="personalFormSubmit('orderCall'); yaCounter32903175.reachGoal('ZVONOK'); _gaq.push(['_trackEvent', 'Button', 'Click', 'ZVONOK']);">Заказать</button>
             </div> 
         </form>
     </div>
@@ -224,7 +224,7 @@
             <label><input type="text" class="req input" placeholder="*Ваш Email" value="" name="EMAIL" autocomplete="off"/></label>
 
             <div class="btn-container">
-                <button type="button" class="submit" onclick="personalFormSubmit('getOptPrice')">Отправить</button>
+                <button type="button" class="submit" onclick="personalFormSubmit('getOptPrice'); yaCounter32903175.reachGoal('UZNAT_CENU'); _gaq.push(['_trackEvent', 'Button', 'Click', 'UZNAT_CENU']);">Отправить</button>
             </div> 
         </form>
     </div>

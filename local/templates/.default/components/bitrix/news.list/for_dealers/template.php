@@ -87,7 +87,7 @@
                     <input type="text" class="req input" placeholder="E-mail контактного лица для связи" value="" name="NEW_EMAIL" autocomplete="off"/><span class="i">*</span>
                 </label>
                 <div class="mes">Отмеченные поля, обязательны для заполнения</div>
-                <button type="button" class="submit" onclick="personalFormSubmit('regForm')">Отправить</button>
+                <button type="button" class="submit" onclick="personalFormSubmit('regForm'); yaCounter32903175.reachGoal('REGISTRACIYA'); _gaq.push(['_trackEvent', 'Button', 'Click', 'REGISTRACIYA']);">Отправить</button>
                 <button type="reset" class="reset">Очистить</button>
             </form>
         </div>
