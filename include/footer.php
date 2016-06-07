@@ -2,9 +2,9 @@
     <nav class="footer_menu">
         <ul>
             <li>
-                <?$APPLICATION->IncludeFile(SITE_DIR."include/footer_menu_link_catalog.php",Array(), Array("MODE"=>"html"));?>    
+                <?$APPLICATION->IncludeFile(SITE_DIR."include/footer_menu_link_catalog.php",Array(), Array("MODE"=>"html"));?>
 
-                <?$APPLICATION->IncludeComponent("bitrix:menu", "footer_submenu", Array( 
+                <?$APPLICATION->IncludeComponent("bitrix:menu", "footer_submenu", Array(
                         "ROOT_MENU_TYPE" => "footer_catalog",    // Тип меню для первого уровня
                         "MENU_CACHE_TYPE" => "Y",    // Тип кеширования
                         "MENU_CACHE_TIME" => "36000000",    // Время кеширования (сек.)
@@ -15,12 +15,12 @@
                         "ALLOW_MULTI_SELECT" => "N",    // Разрешить несколько активных пунктов одновременно
                         ),
                         false
-                    );?>                  
+                    );?>
             </li>
 
             <li>
-                <?$APPLICATION->IncludeFile(SITE_DIR."include/footer_menu_link_company.php",Array(), Array("MODE"=>"html"));?> 
-                <?$APPLICATION->IncludeComponent("bitrix:menu", "footer_submenu", Array( 
+                <?$APPLICATION->IncludeFile(SITE_DIR."include/footer_menu_link_company.php",Array(), Array("MODE"=>"html"));?>
+                <?$APPLICATION->IncludeComponent("bitrix:menu", "footer_submenu", Array(
                         "ROOT_MENU_TYPE" => "footer_company",    // Тип меню для первого уровня
                         "MENU_CACHE_TYPE" => "Y",    // Тип кеширования
                         "MENU_CACHE_TIME" => "36000000",    // Время кеширования (сек.)
@@ -31,12 +31,12 @@
                         "ALLOW_MULTI_SELECT" => "N",    // Разрешить несколько активных пунктов одновременно
                         ),
                         false
-                    );?>                     
+                    );?>
             </li>
 
             <li>
-                <?$APPLICATION->IncludeFile(SITE_DIR."include/footer_menu_link_solutions.php",Array(), Array("MODE"=>"html"));?> 
-                <?$APPLICATION->IncludeComponent("bitrix:menu", "footer_submenu", Array( 
+                <?$APPLICATION->IncludeFile(SITE_DIR."include/footer_menu_link_solutions.php",Array(), Array("MODE"=>"html"));?>
+                <?$APPLICATION->IncludeComponent("bitrix:menu", "footer_submenu", Array(
                         "ROOT_MENU_TYPE" => "footer_solutions",    // Тип меню для первого уровня
                         "MENU_CACHE_TYPE" => "Y",    // Тип кеширования
                         "MENU_CACHE_TIME" => "36000000",    // Время кеширования (сек.)
@@ -47,16 +47,16 @@
                         "ALLOW_MULTI_SELECT" => "N",    // Разрешить несколько активных пунктов одновременно
                         ),
                         false
-                    );?>                   
+                    );?>
             </li>
 
             <li>
-                <?$APPLICATION->IncludeFile(SITE_DIR."include/footer_menu_link_news.php",Array(), Array("MODE"=>"html"));?> 
+                <?$APPLICATION->IncludeFile(SITE_DIR."include/footer_menu_link_news.php",Array(), Array("MODE"=>"html"));?>
             </li>
 
             <li>
-                <?$APPLICATION->IncludeFile(SITE_DIR."include/footer_menu_link_contacts.php",Array(), Array("MODE"=>"html"));?>  
-                <?$APPLICATION->IncludeComponent("bitrix:menu", "footer_submenu", Array( 
+                <?$APPLICATION->IncludeFile(SITE_DIR."include/footer_menu_link_contacts.php",Array(), Array("MODE"=>"html"));?>
+                <?$APPLICATION->IncludeComponent("bitrix:menu", "footer_submenu", Array(
                         "ROOT_MENU_TYPE" => "footer_contacts",    // Тип меню для первого уровня
                         "MENU_CACHE_TYPE" => "Y",    // Тип кеширования
                         "MENU_CACHE_TIME" => "36000000",    // Время кеширования (сек.)
@@ -67,7 +67,7 @@
                         "ALLOW_MULTI_SELECT" => "N",    // Разрешить несколько активных пунктов одновременно
                         ),
                         false
-                    );?>           
+                    );?>
             </li>
 
             <li>
@@ -76,9 +76,9 @@
                     if ($res -> GetNextElement()) {
                         $APPLICATION->IncludeFile(SITE_DIR."include/footer_menu_link_info.php",Array(), Array("MODE"=>"html"));
                     }
-                ?>              
+                ?>
             </li>
-        </ul>                        
+        </ul>
     </nav>
 
     <a href="#order-project" class="order_project btn_ico login-popup-link">Заказать проект</a>
@@ -88,7 +88,7 @@
     <div class="footer_info">
         <div class="footer_info__text">
             <p class="copy">
-                <?$APPLICATION->IncludeFile(SITE_DIR."include/copyright.php",Array(), Array("MODE"=>"html"));?>                       
+                <?$APPLICATION->IncludeFile(SITE_DIR."include/copyright.php",Array(), Array("MODE"=>"html"));?>
             </p>
             <p>
                 <?$APPLICATION->IncludeFile(SITE_DIR."include/footer_text_1.php",Array(), Array("MODE"=>"html"));?>
@@ -106,10 +106,10 @@
 
 
 <div class="hidden">
-   
+
     <!--login-popup-->
     <div id="login-popup" class="popupForm">
-        <span class="h2">Авторизация</span>           
+        <span class="h2">Авторизация</span>
         <form action="#" method="post" class="allform" id="authForm">
             <input type="hidden" name="form" value="authForm">
             <div class="form_error">Неверный логин или пароль!</div>
@@ -119,7 +119,7 @@
             <div class="btn-container">
                 <a href="#reg-popup" class="reg-popup-link">регистрация</a>
                 <button type="button" class="submit" onclick="personalFormSubmit('authForm')">войти</button>
-            </div>        
+            </div>
 
         </form>
     </div>
@@ -144,7 +144,7 @@
                 </div>
                 <h3>Заполните поля</h3>
                 <div class="form_error"></div>
-                <div class="form_success">Ваша заявка отправлена. Мы обязательно свяжемся с вами! Спасибо!</div>                
+                <div class="form_success">Ваша заявка отправлена. Мы обязательно свяжемся с вами! Спасибо!</div>
                 <input type="hidden" name="form" value="regForm">
                 <input type="hidden" id="newDealer" value="Y" name="newDealer">
                 <label class="dealer-new"><input type="text" class="req input1" placeholder="Введите банковские ревкизиты вашей организации, полные ФИО директора компании" value="" name="NEW_BANK_PROPS" autocomplete="off"/></label>
@@ -169,7 +169,7 @@
                 <div class="mes">Отмеченные поля, являются обязательными для заполнения.</div>
                 <button type="reset" class="reset">очистить</button>
                 <button type="button" class="submit" onclick="personalFormSubmit('regForm'); yaCounter32903175.reachGoal('REGISTRACIYA'); ga('send', 'event', 'Button', 'Click', 'REGISTRACIYA');">отправить</button>
-            </div>    
+            </div>
         </form>
 
     </div>
@@ -177,7 +177,7 @@
 
 
     <div id="order-project" class="popupForm">
-        <span class="h2">Заказать проект</span>           
+        <span class="h2">Заказать проект</span>
         <form action="#" method="post" class="allform" id="orderProject">
             <input type="hidden" name="form" value="orderProject">
             <div class="form_error">Заполните все поля!</div>
@@ -190,29 +190,29 @@
 
             <div class="btn-container">
                 <button type="button" class="submit" onclick="personalFormSubmit('orderProject'); yaCounter32903175.reachGoal('PROEKT'); ga('send', 'event', 'Button', 'Click', 'PROEKT');">Заказать</button>
-            </div> 
+            </div>
         </form>
     </div>
 
 
     <div id="order-call" class="popupForm">
-        <span class="h2">Заказать обратный звонок</span>           
+        <span class="h2">Заказать обратный звонок</span>
         <form action="#" method="post" class="allform" id="orderCall">
             <input type="hidden" name="form" value="orderCall">
             <div class="form_error">Заполните все поля!</div>
             <div class="form_success">Ваша заявка отправлена. Мы обязательно свяжемся с вами! Спасибо!</div>
             <label><input type="text" class="req input" placeholder="*Ваше имя" value="" name="NAME" autocomplete="off"/></label>
             <label><input type="text" class="req input phone" placeholder="*Ваш телефон" value="" name="PHONE" autocomplete="off"/></label>
-            <label><textarea placeholder="Ваши комментарии или вопросы" name="COMMENT" autocomplete="off"></textarea></label>                
+            <label><textarea placeholder="Ваши комментарии или вопросы" name="COMMENT" autocomplete="off"></textarea></label>
             <div class="btn-container">
                 <button type="button" class="submit" onclick="personalFormSubmit('orderCall'); yaCounter32903175.reachGoal('ZVONOK'); ga('send', 'event', 'Button', 'Click', 'ZVONOK');">Заказать</button>
-            </div> 
+            </div>
         </form>
     </div>
 
 
     <div id="get-opp-price" class="popupForm">
-        <span class="h2">Узнать оптовую цену</span>           
+        <span class="h2">Узнать оптовую цену</span>
         <form action="#" method="post" class="allform" id="getOptPrice">
             <input type="hidden" name="form" value="getOptPrice">
             <div class="form_error">Заполните все поля!</div>
@@ -225,7 +225,7 @@
 
             <div class="btn-container">
                 <button type="button" class="submit" onclick="personalFormSubmit('getOptPrice'); yaCounter32903175.reachGoal('UZNAT_CENU'); ga('send', 'event', 'Button', 'Click', 'UZNAT_CENU');">Отправить</button>
-            </div> 
+            </div>
         </form>
     </div>
 
