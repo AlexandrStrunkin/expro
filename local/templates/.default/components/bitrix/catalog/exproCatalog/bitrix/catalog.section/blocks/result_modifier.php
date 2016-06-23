@@ -463,4 +463,14 @@ if (!empty($arResult['ITEMS']))
 		}
 	}
 }
+
+//получаем пользовательское поле раздела UF_DOWNLOAD_FILES
+$arSection = CIBlockSection::GetList(array(), array("IBLOCK_ID" => $arResult["IBLOCK_ID"], "ID" => $arResult["ID"]), false, array("UF_*"))->Fetch();
+if (is_array($arSection["UF_DOWNLOAD_FILES"]) && count($arSection["UF_DOWNLOAD_FILES"])) {
+    foreach ($arSection["UF_DOWNLOAD_FILES"] as $file) {
+        $arFile = CFile::GetById($file)->Fetch();
+        $filePath = CFile::GetPath($file);
+        $arResult["DOWNLOADABLE_FILES"][] = array("NAME" => $arFile["FILE_NAME"], "FILE_SIZE" => round ($arFile["FILE_SIZE"] / 1000000, 2), "PATH" => $filePath);
+    }
+}
 ?>

@@ -170,7 +170,7 @@
                     <!--area2-->
                     <div class="area2">
                         <h2><?=$arResult["NAME"]?></h2>
-                        
+
                         <div class="area3">
                             <h3>Характеристики</h3>
                             <div class="area3-container">
@@ -228,6 +228,7 @@
                             </div>
                         </div>
                         <!--END area3-->
+
                         <!--area4-->
                         <div class="area4">
                             <h3>Доступные цвета</h3>
@@ -242,9 +243,20 @@
                             </div>
 
                         </div>   
-                        
+
                         <div class="seriaBlocksSeparate"></div>
-                                                  
+
+                        <?if (!empty($arResult["DOWNLOADABLE_FILES"]) && count($arResult["DOWNLOADABLE_FILES"]) > 0) {?>        
+                            <div class="dowloadable-files-container">
+                                <h3>Материалы для скачивания</h3>
+                                <?
+                                    foreach ($arResult["DOWNLOADABLE_FILES"] as $file) {?>                 
+                                    <div><a href="<?=$file["PATH"]?>" title="скачать <?=$file["NAME"]?>" download><?=$file["NAME"]?></a> <span>(<?=$file["FILE_SIZE"]?> мб)</span></div>
+                                    <?}?>     
+                            </div>
+                            <div class="seriaBlocksSeparate"></div>              
+                            <?}?>               
+
                         <?if ($arResult["DESCRIPTION"]) {?>
                             <h3>Особенности</h3>
                             <div class="area2-container"> 
@@ -345,8 +357,8 @@
                             }
                         ?>
                         <div class="price"><?=$block_price?> <img src="/img/rub1.png" alt=""/></div>
-<!--                        <a href="#get-opp-price" class="price-link login-popup-link" onclick="setOptProduct(<?=$arItem["ID"]?>,'<?=trim($arItem["NAME"])?>')"><span>Узнать оптовую цену</span></a>
--->                      
+                        <!--                        <a href="#get-opp-price" class="price-link login-popup-link" onclick="setOptProduct(<?=$arItem["ID"]?>,'<?=trim($arItem["NAME"])?>')"><span>Узнать оптовую цену</span></a>
+                        -->                      
                         <a href="/about/for_dealers/" class="price-link login-popup-link" ><span>Узнать оптовую цену</span></a>
                         <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="catalog_wrapper__item__image" >
                             <?$img = CFile::ResizeImageGet($pic["ID"], array("width"=>425,"height"=>160), BX_RESIZE_IMAGE_PROPORTIONAL,false);?>
@@ -366,7 +378,7 @@
                             <div class="detail_text">
                                 <p><?=$arItem["DETAIL_TEXT"]?></p>
                             </div>
-                         <? } ?>
+                            <? } ?>
                         <div class="item_info__parametrs">
                             <?if ($arItem["PROPERTIES"]["ARTICLE"]["VALUE"]) {?>
                                 <div class="item_info__parametrs__item">
