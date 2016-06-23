@@ -726,4 +726,27 @@
     margin-bottom: 0 !important;
 }
 
+.dowloadable-files-container {
+    overflow: hidden; 
+    position: relative;
+    font-size: 14px; 
+}
+
+.dowloadable-files-container div {
+    display:inline-block;
+    width: 49%;
+    text-align: left;
+}
+
+.dowloadable-files-container a {
+    line-height: 25px;
+    color: #323232;           
+    font-family: "MuseoSansCyrl-700";  
+}
+
+.dowloadable-files-container span {
+    color: #927a65;
+    font-family: "MuseoSansCyrl-500";
+}
+
 
