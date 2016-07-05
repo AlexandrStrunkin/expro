@@ -1,10 +1,10 @@
 <div class="mainCatalogPopup">
     <div class="mainCatalogPopupContainer">
-        <div class="mainCatalogPopupTitle">Каталог продукции</div> 
+        <div class="mainCatalogPopupTitle">Каталог продукции</div>
 
         <?$APPLICATION->IncludeComponent(
-                "bitrix:catalog.section.list", 
-                "popupCatalog", 
+                "bitrix:catalog.section.list",
+                "popupCatalog",
                 array(
                     "IBLOCK_ID" => "6",
                     "COMPONENT_TEMPLATE" => ".default",
@@ -42,8 +42,8 @@
         <div class="mainCatalogPopupTitle">О компании</div>
 
         <?$APPLICATION->IncludeComponent(
-                "bitrix:menu", 
-                "about_popup", 
+                "bitrix:menu",
+                "about_popup",
                 array(
                     "ROOT_MENU_TYPE" => "footer_company",
                     "MENU_CACHE_TYPE" => "Y",
@@ -59,13 +59,13 @@
                     "DELAY" => "N"
                 ),
                 false
-            );?>     
+            );?>
 
 
     </div>
 
     <div class="mainCatalogPopupClose" onclick="$('.mainAboutPopup').fadeOut()">&#10005;</div>
-</div>   
+</div>
 
 
 <div class="mainContactsPopup">
@@ -73,8 +73,8 @@
         <div class="mainCatalogPopupTitle">Контакты</div>
 
         <?$APPLICATION->IncludeComponent(
-                "bitrix:menu", 
-                "about_popup", 
+                "bitrix:menu",
+                "about_popup",
                 array(
                     "ROOT_MENU_TYPE" => "footer_contacts",
                     "MENU_CACHE_TYPE" => "Y",
@@ -90,13 +90,13 @@
                     "DELAY" => "N"
                 ),
                 false
-            );?>     
+            );?>
 
 
     </div>
 
     <div class="mainCatalogPopupClose" onclick="$('.mainContactsPopup').fadeOut()">&#10005;</div>
-</div>         
+</div>
 
 <header class="header">
     <div class="header__wrapper">
@@ -110,12 +110,12 @@
             ?>
             <div class="header__wrapper__buttons" >
 
-                <div class="private_office1 btn_ico"><a href="/personal/"  style="width:130px"><?=htmlspecialcharsbx($name)?></a> <a class="logout" href="?logout=yes">Выйти</a></div>    
+                <div class="private_office1 btn_ico"><a href="/personal/"  style="width:130px"><?=htmlspecialcharsbx($name)?></a> <a class="logout" href="?logout=yes">Выйти</a></div>
                 <a class="client" href="http://market.expro.ru">Для розничных покупателей</a>
             </div>
             <?} else {?>
             <div class="header__wrapper__buttons">
-                <a href="#login-popup" class="private_office2 btn_ico login-popup-link" >Войти</a>    
+                <a href="#login-popup" class="private_office2 btn_ico login-popup-link" >Войти</a>
                 <a class="client" href="http://market.expro.ru">Для розничных покупателей</a>
             </div>
             <?}?>
@@ -123,7 +123,7 @@
         <div class="header__wrapper__contacts_language">
             <div class="header__wrapper__contacts">
                 <span class="address">
-                    <?$APPLICATION->IncludeFile(SITE_DIR."include/address.php",Array(), Array("MODE"=>"html"));?>                    
+                    <?$APPLICATION->IncludeFile(SITE_DIR."include/address.php",Array(), Array("MODE"=>"html"));?>
                 </span>
                 <span class="topphone">
                     <?$APPLICATION->IncludeFile(SITE_DIR."include/top_phone.php",Array(), Array("MODE"=>"html"));?>
@@ -138,24 +138,24 @@
                 <!--<a href="#" class="active">RU</a>
                 <a href="#">EN</a>-->
             </div>
-        </div>      
-    </div>     
+        </div>
+    </div>
     <div class="logotype">
         <a href="/">
-            <?$APPLICATION->IncludeFile(SITE_DIR."include/name.php",Array(), Array("MODE"=>"html"));?>            
+            <?$APPLICATION->IncludeFile(SITE_DIR."include/name.php",Array(), Array("MODE"=>"html"));?>
         </a>
     </div>
 
     <div class="clearboth"></div>
 
     <div class="main_link">
-        <a href="#" class="main_link1"><span>Офисная мебель</span></a>
+        <a href="<?=isset($_SERVER["HTTPS"]) ? 'https://' : 'http://';?><?=SITE_SERVER_NAME?>/catalog/" class="main_link1"><span>Офисная мебель</span></a>
         <a href="http://hoteldsn.ru/" class="main_link2"><span>Гостиничная мебель</span></a>
-    </div>       
+    </div>
 
     <?$APPLICATION->IncludeComponent(
-            "bitrix:menu", 
-            "top_menu", 
+            "bitrix:menu",
+            "top_menu",
             array(
                 "ROOT_MENU_TYPE" => "top",
                 "MENU_CACHE_TYPE" => "Y",
