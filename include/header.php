@@ -149,7 +149,7 @@
     <div class="clearboth"></div>
 
     <div class="main_link">
-        <a href="http://expro.ru/catalog/" class="main_link1"><span>Офисная мебель</span></a>
+        <a href="<?=isset($_SERVER["HTTPS"]) ? 'https://' : 'http://';?><?=SITE_SERVER_NAME?>/catalog/" class="main_link1"><span>Офисная мебель</span></a>
         <a href="http://hoteldsn.ru/" class="main_link2"><span>Гостиничная мебель</span></a>
     </div>
 
