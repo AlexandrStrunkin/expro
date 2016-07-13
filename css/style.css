@@ -779,7 +779,7 @@ font-family: 'AngleciaProDisplayItalic';
 .catalog_wrapper__item__image img {
     float: left;
     height: 100%;
-    display: none;
+    /*display: none;*/
 }
 
 .catalog_wrapper__item__info {

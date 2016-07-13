@@ -292,7 +292,7 @@
                     </div>
                     <a href="javascript:void(0)" class="catalog_wrapper__item__image" style="">
                         <?
-                            $pic = CFile::ResizeImageGet($offer["DETAIL_PICTURE"]["ID"], array("width"=>425,"height"=>160), BX_RESIZE_IMAGE_PROPORTIONAL ,false);
+                            $pic = CFile::ResizeImageGet($offer["DETAIL_PICTURE"]["ID"], array("width"=>425,"height"=>320), BX_RESIZE_IMAGE_PROPORTIONAL ,false);
                         ?>
                         <img src="<?=$pic['src']?>" alt="" class="main_bg">
                     </a>
