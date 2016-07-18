@@ -777,9 +777,13 @@ font-family: 'AngleciaProDisplayItalic';
 }
 
 .catalog_wrapper__item__image img {
-    float: left;
     height: 100%;
-    /*display: none;*/
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 .catalog_wrapper__item__info {
