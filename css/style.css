@@ -20,7 +20,7 @@
 
 @font-face {font-family: 'PragmaticaBookRegular'; src: url("/fonts/PragmaticaBookRegular.eot?#iefix");}
 @font-face {font-family: 'PragmaticaBookRegular'; src: url("/fonts/PragmaticaBookRegular.ttf");}
-@font-face {font-family: 'PragmaticaBookRegular'; src: url("/fonts/PragmaticaBookRegular.woff") format('woff');}    
+@font-face {font-family: 'PragmaticaBookRegular'; src: url("/fonts/PragmaticaBookRegular.woff") format('woff');}
 @font-face {
     font-family: 'Pragmatica-Bold';
     src: url('/fonts/PragmaticaC-Bold.eot?#iefix') format('embedded-opentype'),
@@ -74,11 +74,11 @@ textarea {
 }
 
 .clearboth {
-    clear: both; 
+    clear: both;
 }
 
 .header {
-    width: 100%;    
+    width: 100%;
     background: #fff;
     overflow: hidden;
     z-index: 1000;
@@ -95,7 +95,7 @@ textarea {
 .header__wrapper {
     padding: 72px 3.1% 0;
     position:relative;
-    height:65px;     
+    height:65px;
 }
 
 .header__wrapper__buttons {
@@ -106,11 +106,11 @@ textarea {
     font-family: 'MuseoSansCyrl-500';
     text-decoration:underline;
     letter-spacing: 0.01em;
-    
+
 }
 
 .client {
-   color: #04B431; 
+   color: #04B431;
 }
 
 .btn_ico {
@@ -195,12 +195,12 @@ textarea {
 
 .logotype {
     margin: -73px auto 49px;
-    text-align: center;    
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    font: 32px/33px 'GothamProBold';   
+    font: 32px/33px 'GothamProBold';
     position:relative;
-    z-index:1; 
+    z-index:1;
     width: 300px;
 }
 
@@ -245,7 +245,7 @@ textarea {
 }
 
 .main_link a:hover span {
-    border-color: transparent;    
+    border-color: transparent;
 }
 
 .top_menu {
@@ -290,7 +290,7 @@ textarea {
 }
 
 .slider li img {
-    width: 100%;        
+    width: 100%;
 }
 
 .slider__info {
@@ -395,25 +395,25 @@ font-family: 'AngleciaProDisplayItalic';
     font-style: normal;
     color: #643c3e;
  }
- 
+
  .carant_title i{
 font-family: 'AngleciaProDisplayItalic';
     font-style: normal;
     color: #643c3e;
  }
- 
+
  .carant_title i span{
 font-family: 'AngleciaProDisplayItalic';
     font-style: normal;
     color: #643c3e;
  }
-.carant_title span { 
+.carant_title span {
       display: block;
       padding: 0 6.2% 0 6.2%;
       letter-spacing: 0.003em;
       font-family: 'Circe-Bold';
       font-size: 32px;
- }   
+ }
 .footer {
     padding: 60px 3.1% 50px;
     overflow: hidden;
@@ -505,7 +505,7 @@ font-family: 'AngleciaProDisplayItalic';
     background: url(/img/ico_phone.png) 18px 9px no-repeat;
     width: 129px;
     padding-left: 39px;
-    padding-right: 0;    
+    padding-right: 0;
 }
 
 .footer_link {
@@ -593,7 +593,7 @@ font-family: 'AngleciaProDisplayItalic';
 }
 
 .catalog_filter {
-    
+
 }
 
 .checkbox_group {
@@ -614,7 +614,7 @@ font-family: 'AngleciaProDisplayItalic';
     width: 20px;
     height: 20px;
     padding-right: 19px;
-    background: url(/img/spr_checkbox.png) 0 0 no-repeat;    
+    background: url(/img/spr_checkbox.png) 0 0 no-repeat;
     cursor: pointer;
 }
 
@@ -633,7 +633,7 @@ font-family: 'AngleciaProDisplayItalic';
     padding-top: 4px;
     font: 11px/13px 'MuseoSansCyrl-700';
     text-transform: uppercase;
-    color: #6b6b6b;    
+    color: #6b6b6b;
     letter-spacing: 0.07em;
 }
 
@@ -738,8 +738,12 @@ font-family: 'AngleciaProDisplayItalic';
     background-position: center center;
     /*background-size: cover;*/
     background-repeat: no-repeat;
+    background-size: 100%;
 }
-
+.page-news a .main_bg{
+    width: 100%;
+    height: auto!important;
+}
 .catalog_wrapper__item__image__quickview_wrapper {
     display: none;
     position: absolute;
@@ -751,7 +755,7 @@ font-family: 'AngleciaProDisplayItalic';
 }
 
 .catalog_wrapper__item__image__quickview {
-    display: table;    
+    display: table;
     width: 100%;
     height: 100%;
 }
@@ -827,9 +831,9 @@ font-family: 'AngleciaProDisplayItalic';
 .item_info__description {
     display: block;
     margin-bottom: 30px;
-    font: 16px/26px 'AngleciaProDisplayItalic';    
+    font: 16px/26px 'AngleciaProDisplayItalic';
     letter-spacing: 0.025em;
-    color: #746b69;    
+    color: #746b69;
 }
 
 .item_info__parametrs__item {
@@ -973,7 +977,7 @@ font-family: 'AngleciaProDisplayItalic';
 
 .flex_active.color_slider .slides li:hover a {
     /*
-    border: 2px solid #84a08a;    
+    border: 2px solid #84a08a;
     */
 }
 
@@ -1068,9 +1072,9 @@ font-family: 'AngleciaProDisplayItalic';
 
 @media screen and (max-width: 1600px) {
     .footer {
-        position: relative;    
+        position: relative;
     }
-    
+
     .footer_menu {
         width: 100%;
     }
@@ -1134,7 +1138,7 @@ font-family: 'AngleciaProDisplayItalic';
         height: 36px;
         padding-right: 2px;
     }
-    
+
     .flex_active.color_slider .slides li:hover {
         background-position: 2px 0;
         background-size: 38px;
@@ -1145,7 +1149,7 @@ font-family: 'AngleciaProDisplayItalic';
         height: 32px;
         margin-left: 3px;
     }
-    
+
     .color-direction-nav a {
         top: 2px;
     }
@@ -1155,15 +1159,15 @@ font-family: 'AngleciaProDisplayItalic';
         height: 32px;
         background-size: 32px;
     }
-    
+
     .btn_color:hover {
         background-position: 0 -32px;
     }
-    
+
     .btn_color.close {
         background-position: 0 -64px;
     }
-    
+
     .btn_color.close:hover {
         background-position: 0 -96px;
     }
@@ -1174,24 +1178,24 @@ font-family: 'AngleciaProDisplayItalic';
         background-size: 32px;
         top: 3px;
     }
-    
+
     .color-direction-nav .color-next {
         background-position: 0 0;
         right: -36px;
         top: 3px;
     }
-    
+
     .color-direction-nav .color-next:hover {
         background-position: 0 -64px;
     }
-    
+
     .color-direction-nav .color-prev {
         display: none;
         background-position: 0 -32px;
         left: -36px;
-        top: 3px;    
+        top: 3px;
     }
-    
+
     .color-direction-nav .color-prev:hover {
         background-position: 0 -96px;
     }
@@ -1232,7 +1236,7 @@ font-family: 'AngleciaProDisplayItalic';
     }
 }
 
-@media screen and (max-width: 1370px) {   
+@media screen and (max-width: 1370px) {
       .footer {
         padding: 25px 2.95% 40px;
     }
@@ -1246,7 +1250,7 @@ font-family: 'AngleciaProDisplayItalic';
     }
 
     .flex-control-nav {
-        left: 3.2%;    
+        left: 3.2%;
     }
 
     .order_project {
@@ -1267,7 +1271,7 @@ font-family: 'AngleciaProDisplayItalic';
     .tile_wrapper__item span {
           font-size: 23px;
     }
-}   
+}
 
 @media screen and (max-width: 1308px) {
     .carant_title {
@@ -1299,7 +1303,7 @@ font-family: 'AngleciaProDisplayItalic';
 
     .item_info__description {
         margin-bottom: 25px;
-        line-height: 20px;    
+        line-height: 20px;
     }
 
     .item_info__colors {
@@ -1909,7 +1913,7 @@ font-family: 'AngleciaProDisplayItalic';
 }
 
 .catalog-seria .area2 {
-    margin: 0 0 35px; 
+    margin: 0 0 35px;
 }
 
 .catalog-seria .area2 .area2-container {
@@ -1980,11 +1984,11 @@ font-family: 'AngleciaProDisplayItalic';
 
 .catalog-seria .area3 {
     float: left;
-    margin: 0 10px 0 0;  
+    margin: 0 10px 0 0;
 }
 
 .catalog_wrapper_seria .area-container {
-    /*height:300px !important;*/ 
+    /*height:300px !important;*/
 }
 
 .catalog_wrapper_seria .area2-container {
@@ -2019,7 +2023,7 @@ font-family: 'AngleciaProDisplayItalic';
     color: #5a5a5a;
 }
 .catalog-seria .area4 a > span {
-    
+
     border-radius: 21px;
     border: 1px solid transparent;
     display: block;
@@ -4213,7 +4217,7 @@ font-family: 'AngleciaProDisplayItalic';
 
 /**********sub*******************/
 .sub {
-    padding: 0 0 55px 0; 
+    padding: 0 0 55px 0;
     margin: -3px 0 0;
     background: #efeeec;
 }
@@ -4562,7 +4566,7 @@ font-family: 'AngleciaProDisplayItalic';
 .downloadCatalogVideo {
     position: absolute;
     bottom:0;
-    left:0;   
+    left:0;
 }
 
 .downloadCatalogVideo a{
