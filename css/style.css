@@ -738,8 +738,12 @@ font-family: 'AngleciaProDisplayItalic';
     background-position: center center;
     /*background-size: cover;*/
     background-repeat: no-repeat;
+    background-size: 100%;
 }
-
+.page-news a .main_bg{
+    width: 100%;
+    height: auto!important;
+}
 .catalog_wrapper__item__image__quickview_wrapper {
     display: none;
     position: absolute;
