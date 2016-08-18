@@ -107,18 +107,18 @@
         $strElementEdit = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "ELEMENT_EDIT");
         $strElementDelete = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "ELEMENT_DELETE");
         $arElementDeleteParams = array("CONFIRM" => GetMessage('CT_BCS_TPL_ELEMENT_DELETE_CONFIRM'));
-    ?>    
+    ?>
 
     <?/*$this->SetViewTarget('elementH1');?>
         <?=$arResult["IPROPERTY_VALUES"]["ELEMENT_PAGE_TITLE"]?>
-    <?$this->EndViewTarget();*/?>  
+    <?$this->EndViewTarget();*/?>
 
     <?$this->SetViewTarget('catalogFilter');?>
     <div class="checkbox_group">
 
         <?
             $prop = CIBlockProperty::GetPropertyEnum( "TYPE", Array("SORT"=>"asc"),Array("IBLOCK_ID"=>6));
-            while($arProp = $prop->Fetch()) {               
+            while($arProp = $prop->Fetch()) {
             ?>
 
             <input class="catalogSectionBox" type="checkbox" name="par<?=$arProp["ID"]?>" id="par<?=$arProp["ID"]?>" value="<?=$arProp["ID"]?>" autocomplete="off">
@@ -127,11 +127,11 @@
             <?}?>
 
     </div>
-    <?$this->EndViewTarget();?> 
+    <?$this->EndViewTarget();?>
 
 
     <div class="catalog_wrapper catalog_wrapper_seria">
-        <!--catalog-seria-->   
+        <!--catalog-seria-->
 
         <?if ($arResult["PICTURE"]["SRC"] || $arResult["DESCRIPTION"]) {?>
             <div class="catalog-seria">
@@ -152,15 +152,15 @@
                                 foreach ($arSection["UF_PICTURES"] as $pic) {?>
                                 <?
                                     $big = CFile::ResizeImageGet($pic, array("width"=>800,"height"=>700), BX_RESIZE_IMAGE_EXACT,false);
-                                    $small = CFile::ResizeImageGet($pic, array("width"=>110,"height"=>110), BX_RESIZE_IMAGE_EXACT,false); 
-                                ?> 
+                                    $small = CFile::ResizeImageGet($pic, array("width"=>110,"height"=>110), BX_RESIZE_IMAGE_EXACT,false);
+                                ?>
                                 <a href="<?=$big['src']?>"><img src="<?=$small['src']?>" alt=""/></a>
                                 <?}?>
                             <?if (count($arSection["UF_PICTURES"]) > 5) {?>
                                 <a href="#" class="more">+<?=count($arSection["UF_PICTURES"])-4?></a>
                                 <?}?>
 
-                            <?}?>        
+                            <?}?>
                     </div>
 
                 </div>
@@ -235,32 +235,32 @@
                             <div class="img-container" style="overflow-x: hidden;">
                                 <? $color = CIBlockElement::GetList(array("SORT"=>"ASC"),array("IBLOCK_ID"=>7,"ID"=>$arSection["UF_COLORS"]),false,false,array("ID","PREVIEW_PICTURE","NAME"));
                                     $colorCount = $color->SelectedRowsCount();
-                                    while($arColor = $color->Fetch()) {?>                 
+                                    while($arColor = $color->Fetch()) {?>
                                     <a href="<?=CFile::GetPath($arColor["PREVIEW_PICTURE"])?>" class="fancy" title="<?=$arColor["NAME"]?>"><span><span><img src="<?=CFile::GetPath($arColor["PREVIEW_PICTURE"])?>" alt=""/></span></span><?=$arColor["NAME"]?></a>
-                                    <?}?>          
+                                    <?}?>
 
                                 <a href="javascript:void(0)" onmouseover="$(this).siblings('a.fancy').show(); $(this).fadeOut()" class="more"><span><span>+<?=(count($arSection["UF_COLORS"])-4)?></span></span>Цветовых сочетаний</a>
                             </div>
 
-                        </div>   
+                        </div>
 
                         <div class="seriaBlocksSeparate"></div>
 
-                        <?if (!empty($arResult["DOWNLOADABLE_FILES"]) && count($arResult["DOWNLOADABLE_FILES"]) > 0) {?>        
+                        <?if (!empty($arResult["DOWNLOADABLE_FILES"]) && count($arResult["DOWNLOADABLE_FILES"]) > 0) {?>
                             <div class="dowloadable-files-container">
                                 <h3>Материалы для скачивания</h3>
                                 <?
-                                    foreach ($arResult["DOWNLOADABLE_FILES"] as $file) {?>                 
+                                    foreach ($arResult["DOWNLOADABLE_FILES"] as $file) {?>
                                     <div><a href="<?=$file["PATH"]?>" title="скачать <?=$file["NAME"]?>" download><?=$file["NAME"]?></a> <span>(<?=$file["FILE_SIZE"]?> мб)</span></div>
-                                    <?}?>     
+                                    <?}?>
                             </div>
-                            <div class="seriaBlocksSeparate"></div>              
-                            <?}?>               
+                            <div class="seriaBlocksSeparate"></div>
+                            <?}?>
 
                         <?if ($arResult["DESCRIPTION"]) {?>
                             <h3>Особенности</h3>
-                            <div class="area2-container"> 
-                                <div class="seriaDescription">                                 
+                            <div class="area2-container">
+                                <div class="seriaDescription">
                                     <?=$arResult["DESCRIPTION"]?>
                                 </div>
                             </div>
@@ -277,7 +277,7 @@
 
             <?}?>
 
-        <!--END catalog-seria-->  
+        <!--END catalog-seria-->
 
         <div id="tempData"></div>
         <input type="hidden" id="pageCount" value="<?=$arResult["NAV_RESULT"]->NavPageCount?>">
@@ -331,26 +331,26 @@
                     //arshow($arItem["PROPERTIES"]["TYPE"]);
                 ?>
 
-                <?              
+                <?
                     $pic = $arItem["DETAIL_PICTURE"];
                     if (!$pic["ID"]) {
                         $pic = $arItem["PREVIEW_PICTURE"];
-                    } 
+                    }
                 ?>
 
                 <div class="catalog_wrapper__item" id="<? echo $strMainID; ?>" rel="<?=$arItem["PROPERTIES"]["TYPE"]["VALUE_ENUM_ID"]?>" data="p<?=$_GET["PAGEN_1"]?>">
 
                     <div class="catalog_wrapper__item__left">
-                        <?  
+                        <?
                             $offersPrices = array();
                             if(count($arItem['JS_OFFERS'])>1){ // --- if item have SKU
                                 foreach ($arItem['JS_OFFERS'] as $key => $value) {
-                                    array_push($offersPrices,$value['PRICE']['VALUE']); // --- collect all price values without RUB sign                     
+                                    array_push($offersPrices,$value['PRICE']['VALUE']); // --- collect all price values without RUB sign
                                 }
                                 if (count(array_unique($offersPrices)) === 1){
                                     $block_price = $offersPrices[0];
                                 } else {
-                                    $block_price = "от ".min($offersPrices);   
+                                    $block_price = "от ".min($offersPrices);
                                 }
                             } else {
                                 $block_price = $arItem["PRICES"][$arParams["PRICE_CODE"][0]]["VALUE"];
@@ -358,11 +358,11 @@
                         ?>
                         <div class="price"><?=$block_price?> <img src="/img/rub1.png" alt=""/></div>
                         <!--                        <a href="#get-opp-price" class="price-link login-popup-link" onclick="setOptProduct(<?=$arItem["ID"]?>,'<?=trim($arItem["NAME"])?>')"><span>Узнать оптовую цену</span></a>
-                        -->                      
+                        -->
                         <a href="/about/for_dealers/" class="price-link login-popup-link" ><span>Узнать оптовую цену</span></a>
                         <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="catalog_wrapper__item__image" >
-                            <?$img = CFile::ResizeImageGet($pic["ID"], array("width"=>425,"height"=>160), BX_RESIZE_IMAGE_PROPORTIONAL,false);?>
-                            <img src="<?=$img['src']?>" alt="<?=$arItem["DETAIL_PICTURE"]["ALT"]?>" class="" style="display: block; max-height: 160px !important; margin: 0 auto; float:none">
+                            <?$img = CFile::ResizeImageGet($pic["ID"], array("width"=>425,"height"=>325), BX_RESIZE_IMAGE_PROPORTIONAL,false);?>
+                            <img src="<?=$img['src']?>" alt="<?=$arItem["DETAIL_PICTURE"]["ALT"]?>" class="" style="display: block; max-height: 250px; float:none">
                         </a>
                     </div>
 
