@@ -667,7 +667,7 @@ $(document).ready(function () {
         animationSpeed: 1500
     });
 
-    $('.catalog_wrapper__item__image img').css('height', $('.catalog_wrapper__item').height());
+    $('.catalog_wrapper__item__image img').css('width', $('.catalog_wrapper__item').height());
 
     // HOVER
     $('.catalog_wrapper__item').hover(function (event) {
