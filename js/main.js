@@ -667,7 +667,7 @@ $(document).ready(function () {
         animationSpeed: 1500
     });
 
-    $('.catalog_wrapper__item__image img').css('width', $('.catalog_wrapper__item').height());
+    $('.catalog_wrapper__item__image img').css('width', $('.catalog_wrapper__item__image').width());
 
     // HOVER
     $('.catalog_wrapper__item').hover(function (event) {
@@ -835,7 +835,7 @@ $(window).resize(function () {
     $('.one .tile_wrapper__item:nth-child(1), .one .tile_wrapper__item:nth-child(4)').css('height', heightTile);
     $('.two .tile_wrapper__item:nth-child(1), .two .tile_wrapper__item:nth-child(4)').css('height', heightTile);
 
-    $('.catalog_wrapper__item__image img').css('height', $('.catalog_wrapper__item').height());
+    //$('.catalog_wrapper__item__image img').css('height', $('.catalog_wrapper__item').height());
 
     setFooterMargins();
 
