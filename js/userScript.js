@@ -1,7 +1,7 @@
 
 //ajax фильтрация в каталоге при смене чекбоксов вверху каталога
 function showCatalogSections() {
-    $(".catalogSectionBox").parent(".ffCheckboxWrapper").on("click",function(){  
+    $(".catalogSectionBox").parent(".ffCheckboxWrapper").on("click",function(){
         filterItems();
     })
 }
@@ -32,7 +32,7 @@ function filterItems() {
 
     }
     else {
-        $(".catalog_wrapper__item, .catalog_wrapper__item_table").fadeIn(); 
+        $(".catalog_wrapper__item, .catalog_wrapper__item_table").fadeIn();
     }
 }
 
@@ -41,7 +41,7 @@ function filterItems() {
 function catalogPopupBlock() {
     $(".catalogPopupWrapper > ul > li > div > a").click(function(e){
         var display = $(this).parent().siblings("ul").css("display");
-        if ($(this).parent().siblings("ul").length > 0) { 
+        if ($(this).parent().siblings("ul").length > 0) {
             e.preventDefault();
             $(".catalogPopupWrapper > ul > li > ul").slideUp();
             $("a.realSectionHref").css("display","none");
@@ -49,39 +49,39 @@ function catalogPopupBlock() {
                 $(this).parent().siblings("ul").slideDown();
                 $(this).parent().siblings("a.realSectionHref").toggle();
             }
-        }                                                 
-    })   
+        }
+    })
 }
 
 
 //вещаем обработку всех ссылок с адресом /catalog/
 function catchCatalog() {
     $("a").on("click",function(e){
-        //если ссылка на корень каталога, то вместо перехода показываем всплывающее окно каталога           
+        //если ссылка на корень каталога, то вместо перехода показываем всплывающее окно каталога
         if ($(this).attr("href") == "/catalog/") {
             e.preventDefault();
             $('.mainCatalogPopup').fadeIn()
         }
 
-        //если ссылка на корень о компании, то вместо перехода показываем всплывающее окно о компании           
+        //если ссылка на корень о компании, то вместо перехода показываем всплывающее окно о компании
         if ($(this).attr("href") == "/about/") {
             e.preventDefault();
             $('.mainAboutPopup').fadeIn()
         }
 
-        //если ссылка на корень о компании, то вместо перехода показываем всплывающее окно о компании           
+        //если ссылка на корень о компании, то вместо перехода показываем всплывающее окно о компании
         if ($(this).attr("href") == "/contacts/") {
             e.preventDefault();
             $('.mainContactsPopup').fadeIn()
         }
     })
-}  
+}
 
 
 //подгрузка инфы о разделе в popup
 function loadSection(ID) {
 
-    $.post("/ajax/fastView.php",{ID:ID},function(data){ 
+    $.post("/ajax/fastView.php",{ID:ID},function(data){
         $("#catalog-window").html(data);
 
         //реинициализация fancybox
@@ -214,7 +214,7 @@ function loadSection(ID) {
                 prev.addClass("inactive");
             }
             return false;
-        });    
+        });
 
     })
 
@@ -226,7 +226,7 @@ function loadSection(ID) {
 //ajax подгрузка каталога
 function loadCatalogAjax() {
     processing = false;
-    $(document).scroll(function(){  
+    $(document).scroll(function(){
         if ($(document).scrollTop() > (parseInt($(".wrapper").outerHeight()) - parseInt($(".footer").outerHeight()) - 450) && processing == false && $("#catalog_wrapper_table").length > 0 && cur_page < $("#pageCount").val()) {
             processing = true;
             $(".loadingProcess").show();
@@ -242,12 +242,12 @@ function loadCatalogAjax() {
                 $(".catalog_wrapper__item:visible, .catalog_wrapper__item_table:visible").each(function(){
                     if ($(this).attr("data") == "p" + cur_page) {
                         loadedVisibleItems++;
-                    }                        
+                    }
                 })
                 if (loadedVisibleItems == 0) {
-                    loadCatalogAjax(); 
+                    loadCatalogAjax();
                 }
-                else {   
+                else {
                     $(".loadingProcess").hide()
                 }
                 processing = false;
@@ -255,8 +255,8 @@ function loadCatalogAjax() {
                     $(".loadingProcess").hide()
                     $(".catalog_wrapper_top_link").fadeIn();
                 }
-
-            });                 
+                $('.catalog_wrapper__item__image img').css('width', $('.catalog_wrapper__item__image').width());
+            });
 
         }
     })
@@ -265,56 +265,56 @@ function loadCatalogAjax() {
 
 //авторизация / регистрация
 
-function personalFormSubmit(form) { 
+function personalFormSubmit(form) {
 
     //отправка формы в обработчик
     function submitForm(form) {
-        var formData = $("#" + form).serialize();    
+        var formData = $("#" + form).serialize();
         $.ajax({
             url: "/ajax/checkForm.php",
             type: "POST",
             data: formData,
             success: function(data){
                 if (data == "OK") {
-                    $(".form_error").hide(); 
+                    $(".form_error").hide();
                     $(".wrong_border").removeClass("wrong_border");
                     $(".form_success").show();
                     $("#" + form).find("input[type=text]").val("");
                     $("#" + form).find("textarea").val("");
                 }
                 else {
-                    $("#" + form + " .form_error").show();  
+                    $("#" + form + " .form_error").show();
                     $("#" + form + " .form_error").html(data);
                 }
             },
         });
-    }   
+    }
 
 
     $(".form_error, .form_success").hide();
-    $(".wrong_border").removeClass("wrong_border");  
+    $(".wrong_border").removeClass("wrong_border");
 
     //паттерн для валидации email
-    var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i; 
+    var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
 
     var res = true;
 
     //проверка заполнения всех полей
     $("#" + form + " .req:visible").each(function(){
-        if ($(this).val() == "") {  
-            $(this).addClass("wrong_border");                                                
-            $("#" + form + " .form_error").show();  
-            $("#" + form + " .form_error").html("Заполните все поля!");  
+        if ($(this).val() == "") {
+            $(this).addClass("wrong_border");
+            $("#" + form + " .form_error").show();
+            $("#" + form + " .form_error").html("Заполните все поля!");
             res = false
-        }             
+        }
     });
 
     if (res == false) {
-        return false;      
+        return false;
     }
 
     switch(form) {
-        case "authForm":  
+        case "authForm":
             var email = $("#auth_email").val();
             var pass = $("#auth_password").val();
 
@@ -324,7 +324,7 @@ function personalFormSubmit(form) {
                 }
                 else {
                     $("#" + form + " .form_error").css("display","block").html("Неверный логин или пароль!");
-                }                          
+                }
             })
             break;
 
@@ -337,49 +337,49 @@ function personalFormSubmit(form) {
 
         switch ($("#newDealer").val()) {
             case "Y": email = $("#" + form + " input[name=NEW_EMAIL]").val(); emailInput = $("#" + form + " input[name=NEW_EMAIL]");  break;
-            case "N": email = $("#" + form + " input[name=EMAIL]").val(); emailInput = $("#" + form + " input[name=EMAIL]");  break; 
-        }  
+            case "N": email = $("#" + form + " input[name=EMAIL]").val(); emailInput = $("#" + form + " input[name=EMAIL]");  break;
+        }
 
         console.log(email);
-              
+
         if (!pattern.test(email)) {
-            $("#" + form + " .form_error").show();  
-            $("#" + form + " .form_error").html("Неверный email!"); 
+            $("#" + form + " .form_error").show();
+            $("#" + form + " .form_error").html("Неверный email!");
             emailInput.addClass("wrong_border");
             return false;
-        }    
+        }
 
         //отправляем на регистрацию
         else {
 
             submitForm(form);
-            
+
         }
 
         break;
 
 
         //заказать проект
-        case "orderProject" : 
+        case "orderProject" :
 
             //проверка email
             var emailInput = $("#" + form + " input[name=EMAIL]");
-            var email = $(emailInput).val();   
+            var email = $(emailInput).val();
             if (!pattern.test(email)) {
-                $("#" + form + " .form_error").show();  
-                $("#" + form + " .form_error").html("Неверный email!"); 
+                $("#" + form + " .form_error").show();
+                $("#" + form + " .form_error").html("Неверный email!");
                 emailInput.addClass("wrong_border");
                 return false;
-            }         
+            }
 
             //отправка формы
-            submitForm(form); 
+            submitForm(form);
 
             break;
 
 
         //заказать звонок
-        case "orderCall": 
+        case "orderCall":
 
             submitForm(form);
 
@@ -389,13 +389,13 @@ function personalFormSubmit(form) {
 
             //проверка email
             var emailInput = $("#" + form + " input[name=EMAIL]");
-            var email = $(emailInput).val();   
+            var email = $(emailInput).val();
             if (!pattern.test(email)) {
-                $("#" + form + " .form_error").show();  
-                $("#" + form + " .form_error").html("Неверный email!"); 
+                $("#" + form + " .form_error").show();
+                $("#" + form + " .form_error").html("Неверный email!");
                 emailInput.addClass("wrong_border");
                 return false;
-            }       
+            }
 
             submitForm(form);
 
@@ -405,22 +405,22 @@ function personalFormSubmit(form) {
 
             //проверка email
             var emailInput = $("#" + form + " input[name=CONTACT_EMAIL]");
-            var email = $(emailInput).val();   
+            var email = $(emailInput).val();
             if (!pattern.test(email)) {
-                $("#" + form + " .form_error").show();  
-                $("#" + form + " .form_error").html("Неверный email!"); 
+                $("#" + form + " .form_error").show();
+                $("#" + form + " .form_error").html("Неверный email!");
                 emailInput.addClass("wrong_border");
                 return false;
-            }       
+            }
 
             submitForm(form);
 
-            break;    
+            break;
 
 
 
 
-    } 
+    }
 }
 
 
@@ -428,7 +428,7 @@ function personalFormSubmit(form) {
 function setOptProduct(id, name) {
     if (parseInt(id) > 0 && name != "") {
         $("#optProductID").val(id);
-        $("#get-opp-price input[name=PRODUCT]").val(name); 
+        $("#get-opp-price input[name=PRODUCT]").val(name);
     }
 }
 
@@ -436,7 +436,7 @@ function setOptProduct(id, name) {
 //показать/скрыть описание серии
 function showHideDescription(){
 
-    var height = $(".seriaDescription").css("height");       
+    var height = $(".seriaDescription").css("height");
 
 
     //скрываем ссылку "показать полностью", если описание слишком маленькое
@@ -446,7 +446,7 @@ function showHideDescription(){
     //показ/скрытие блока "особенности" для серий
     $("#showAllDesc").on("click",function(){
         var link = $(this);
-        if ($(link).hasClass("closed")) {  
+        if ($(link).hasClass("closed")) {
             $(".area2-container").animate({"height":height}, 500, function(){$(link).html("свернуть");});
             $(link).removeClass("closed");
 
@@ -472,15 +472,15 @@ function setCatalogView(view) {
 
 
 $(function(){
-    //все функции описаны выше 
+    //все функции описаны выше
     showCatalogSections();
 
     catalogPopupBlock();
 
-    catchCatalog();   
+    catchCatalog();
 
     cur_page = 1; //параметр для ajax-подгрузки каталога
     loadCatalogAjax();
 
-    showHideDescription();  
-}) 
+    showHideDescription();
+})
