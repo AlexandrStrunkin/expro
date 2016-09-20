@@ -7,8 +7,8 @@ $APPLICATION->SetTitle("Каталог офисной мебели");
 $filterView = (COption::GetOptionString("main", "wizard_template_id", "eshop_adapt_horizontal", SITE_ID) == "eshop_adapt_vertical" ? "HORIZONTAL" : "VERTICAL");
 ?>
 <?$APPLICATION->IncludeComponent(
-	"bitrix:catalog", 
-	"exproCatalog", 
+	"bitrix:catalog",
+	"exproCatalog",
 	array(
 		"IBLOCK_TYPE" => "catalog",
 		"IBLOCK_ID" => "6",
