@@ -2120,9 +2120,11 @@ font-family: 'AngleciaProDisplayItalic';
 
 }
 .catalog_wrapper_seria .catalog_wrapper__item__left  .catalog_wrapper__item__image {
-    height: 90%;
+    height: 60%;
     width: 100%;
-    /*margin: 18% 0;  */
+    /* margin: 18% 0; */
+    display: block;
+    top: 15%;
 }
 .catalog_wrapper_seria .item_info__title {
     font-size: 20px;

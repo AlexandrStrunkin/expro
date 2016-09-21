@@ -255,7 +255,6 @@ function loadCatalogAjax() {
                     $(".loadingProcess").hide()
                     $(".catalog_wrapper_top_link").fadeIn();
                 }
-                $('.catalog_wrapper__item__image img').css('width', $('.catalog_wrapper__item__image').width());
             });
 
         }
