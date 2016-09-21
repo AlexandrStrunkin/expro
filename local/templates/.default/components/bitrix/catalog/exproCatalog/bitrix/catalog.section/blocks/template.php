@@ -362,7 +362,7 @@
                         <a href="/about/for_dealers/" class="price-link login-popup-link" ><span>Узнать оптовую цену</span></a>
                         <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="catalog_wrapper__item__image" >
                             <?$img = CFile::ResizeImageGet($pic["ID"], array("width"=>425,"height"=>325), BX_RESIZE_IMAGE_PROPORTIONAL,false);?>
-                            <img src="<?=$img['src']?>" alt="<?=$arItem["DETAIL_PICTURE"]["ALT"]?>" class="" style="display: block; width: 100%; float:none">
+                            <img src="<?=$img['src']?>" alt="<?=$arItem["DETAIL_PICTURE"]["ALT"]?>" class="" style="display: block; float:none">
                         </a>
                     </div>
 

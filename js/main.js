@@ -667,7 +667,12 @@ $(document).ready(function () {
         animationSpeed: 1500
     });
 
-
+    if($('.catalog_wrapper__item__image').height() < $('.catalog_wrapper__item__image img').height()){
+          $('.catalog_wrapper__item__image img').css('height', '100%');
+     }
+     if($('.catalog_wrapper__item__image').width() < $('.catalog_wrapper__item__image img').width()){
+          $('.catalog_wrapper__item__image img').css('width', '100%');
+     }
     // HOVER
     $('.catalog_wrapper__item').hover(function (event) {
         var $_this = $(this);
