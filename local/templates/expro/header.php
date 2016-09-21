@@ -32,7 +32,7 @@
     
     
     <?include($_SERVER["DOCUMENT_ROOT"]."/include/headerStrings.php")?>
-    
+    <meta name="google-site-verification" content="3oXRHY4SGpxUgg5ge8XqeiqOwfLvPNtWUhTeVTnAmPw" />
     
 </head>
 <body>
