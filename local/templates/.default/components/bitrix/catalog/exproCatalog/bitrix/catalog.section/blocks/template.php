@@ -361,13 +361,8 @@
                         -->
                         <a href="/about/for_dealers/" class="price-link login-popup-link" ><span>Узнать оптовую цену</span></a>
                         <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="catalog_wrapper__item__image" >
-                            <?$img = CFile::ResizeImageGet($pic["ID"], array("width"=>425,"height"=>180), BX_RESIZE_IMAGE_PROPORTIONAL,true);?>
-                            <? if($img["width"] > $img["height"] && $img["width"] > 410 && $img["width"] / $img["height"] >= 425 / 180){
-                                  $style = 'width: 100%;';
-                            } else {
-                                 $style = 'height: 100%;';
-                            }?>
-                            <img src="<?=$img['src']?>" alt="<?=$arItem["DETAIL_PICTURE"]["ALT"]?>" class="" style="display: block; <?= $style?> float:none">
+                            <?$img = CFile::ResizeImageGet($pic["ID"], array("width"=>425,"height"=>425), BX_RESIZE_IMAGE_PROPORTIONAL,true);?>
+                            <img src="<?=$img['src']?>" alt="<?=$arItem["DETAIL_PICTURE"]["ALT"]?>" class="" style="display: block; max-width: 100%; max-height: 100%; float:none">
                         </a>
                     </div>
 

@@ -290,11 +290,11 @@
                         <?=$offer["PRICES"][$arParams["PRICE_CODE"][0]]["VALUE"]?>
                         <img src="/img/rub1.png" alt="" />
                     </div>
-                    <a href="javascript:void(0)" class="catalog_wrapper__item__image" style="">
+                    <a href="javascript:void(0)" class="catalog_wrapper__item__image" style="height: 60%; width: 100%;">
                         <?
-                            $pic = CFile::ResizeImageGet($offer["DETAIL_PICTURE"]["ID"], array("width"=>425,"height"=>320), BX_RESIZE_IMAGE_PROPORTIONAL ,false);
+                            $pic = CFile::ResizeImageGet($offer["DETAIL_PICTURE"]["ID"], array("width"=>425,"height"=>425), BX_RESIZE_IMAGE_PROPORTIONAL ,true);
                         ?>
-                        <img src="<?=$pic['src']?>" alt="" class="main_bg">
+                        <img src="<?=$pic['src']?>" alt="" class="main_bg" style="max-width: 100%; max-height: 100%;">
                     </a>
                 </div>
 
