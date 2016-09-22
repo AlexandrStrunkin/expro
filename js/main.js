@@ -666,11 +666,7 @@ $(document).ready(function () {
         slideshowSpeed: 7000,
         animationSpeed: 1500
     });
-
-    if($('.catalog_wrapper__item__image').height() < $('.catalog_wrapper__item__image img').height()){
-          $('.catalog_wrapper__item__image img').css('height', '100%');
-     }
-    if($('.catalog_wrapper__item__image img').width() > $('.catalog_wrapper__item__image').width()){
+    if($('.catalog_wrapper__item__image').width() <= 300){
           $('.catalog_wrapper__item__image img').css('width', '100%');
      }
     // HOVER
