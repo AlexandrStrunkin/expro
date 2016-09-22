@@ -667,8 +667,13 @@ $(document).ready(function () {
         animationSpeed: 1500
     });
     if($('.catalog_wrapper__item__image').width() <= 300){
+      $('.catalog_wrapper__item__image img').css('width', '100%');
+    }
+    $(window).resize(function(){
+        if($('.catalog_wrapper__item__image').width() <= 300){
           $('.catalog_wrapper__item__image img').css('width', '100%');
-     }
+        }
+     });
     // HOVER
     $('.catalog_wrapper__item').hover(function (event) {
         var $_this = $(this);
