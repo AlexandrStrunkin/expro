@@ -255,6 +255,17 @@ function loadCatalogAjax() {
                     $(".loadingProcess").hide()
                     $(".catalog_wrapper_top_link").fadeIn();
                 }
+                if($('.catalog_wrapper__item__image').width() <= 300){
+                  $('.catalog_wrapper__item__image img').css('width', '100%');
+                }
+                $(window).resize(function(){
+                    if($('.catalog_wrapper__item__image').width() <= 300){
+                      $('.catalog_wrapper__item__image img').css('width', '100%');
+                    }else{
+                      $('.catalog_wrapper__item__image img').css('width', 'auto');
+                    }
+                 });
+
             });
 
         }
