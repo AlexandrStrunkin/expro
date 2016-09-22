@@ -672,6 +672,8 @@ $(document).ready(function () {
     $(window).resize(function(){
         if($('.catalog_wrapper__item__image').width() <= 300){
           $('.catalog_wrapper__item__image img').css('width', '100%');
+        }else{
+          $('.catalog_wrapper__item__image img').css('width', 'auto');
         }
      });
     // HOVER
