@@ -666,7 +666,7 @@ $(document).ready(function () {
         slideshowSpeed: 7000,
         animationSpeed: 1500
     });
-    if($('.catalog_wrapper__item__image').width() <= 300){
+    /*if($('.catalog_wrapper__item__image').width() <= 300){
       $('.catalog_wrapper__item__image img').css('width', '100%');
     }
     $(window).resize(function(){
@@ -675,7 +675,7 @@ $(document).ready(function () {
         }else{
           $('.catalog_wrapper__item__image img').css('width', 'auto');
         }
-     });
+     });   */
     // HOVER
     $('.catalog_wrapper__item').hover(function (event) {
         var $_this = $(this);
