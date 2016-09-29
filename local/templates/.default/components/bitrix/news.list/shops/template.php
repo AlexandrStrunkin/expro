@@ -332,7 +332,7 @@
 
     <?$k = 1;?>
     <?$index = array();?>
-    <?foreach($arResult["ITEMS"] as $arItem){?>
+    <?foreach($arResult["ITEMS"] as $arItem){?>  
         <?if ($arItem["PROPERTIES"]["COORDS_LAT"]["VALUE"] && $arItem["PROPERTIES"]["COORDS_LNG"]["VALUE"]){?>
             <?$index[$arItem["ID"]] = $k; //индексы элементов по ID, нужны для скриптов?>
             <div class="contacts-window" id="coord<?=$k?>">
