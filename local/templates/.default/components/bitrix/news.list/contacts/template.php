@@ -238,8 +238,8 @@
                 <div class="tabs">
                     <a href="#tab<?=$k*2-1?>" class="active">Контакты</a>
                     <?if ($arItem["PREVIEW_TEXT"]){?>
-                    <a href="#tab<?=$k*2?>">Информация</a>
-                    <?}?>
+                        <a href="#tab<?=$k*2?>">Информация</a>
+                        <?}?>
                 </div>
                 <div class="tab-container">
                     <div id="tab<?=$k*2-1?>-content" class="tab-content">
@@ -251,8 +251,17 @@
                             <?if ($arItem["PROPERTIES"]["PHONE"]["VALUE"]){?>    
                                 <tr><td>Телефон</td><td><?=$arItem["PROPERTIES"]["PHONE"]["VALUE"]?></td></tr>
                                 <?}?>                              
-                            <?if ($arItem["PROPERTIES"]["EMAIL"]["VALUE"]){?>
-                                <tr><td>Почта</td><td><?=$arItem["PROPERTIES"]["EMAIL"]["VALUE"]?></td></tr>
+                            <?if (is_array($arItem["PROPERTIES"]["EMAIL"]["VALUE"]) && count($arItem["PROPERTIES"]["EMAIL"]["VALUE"]) > 0){?>
+                                <tr><td>Почта</td>
+                                    <td>
+                                        <?foreach ($arItem["PROPERTIES"]["EMAIL"]["VALUE"] as $vID => $value) {?>
+                                            <?if (!empty($value)) {?>
+                                                <?$description = $arItem["PROPERTIES"]["EMAIL"]["DESCRIPTION"][$vID]; //описание значения?>
+                                                <?if (!empty($description)) {?><?= $description ?>: <?}?><a href="mailto:<?= $value ?>" onclick="yaCounter32903175.reachGoal('pochta'); ga('send', 'event', 'Button', 'Click', 'pochta');"><?= $value ?></a><br />                                   
+                                                <?}?>
+                                            <?}?>
+                                    </td>
+                                </tr>
                                 <?}?>
                             <?if ($arItem["PROPERTIES"]["FAX"]["VALUE"]){?>
                                 <tr><td>Факс</td><td><?=$arItem["PROPERTIES"]["FAX"]["VALUE"]?></td></tr>
