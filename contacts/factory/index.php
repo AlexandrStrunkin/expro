@@ -8,9 +8,9 @@
 		"IBLOCK_TYPE" => "content",
 		"IBLOCK_ID" => "17",
 		"NEWS_COUNT" => "999",
-		"SORT_BY1" => "ID",
+		"SORT_BY1" => "SORT",
 		"SORT_ORDER1" => "ASC",
-		"SORT_BY2" => "SORT",
+		"SORT_BY2" => "ID",
 		"SORT_ORDER2" => "ASC",
 		"FILTER_NAME" => "",
 		"FIELD_CODE" => array(
