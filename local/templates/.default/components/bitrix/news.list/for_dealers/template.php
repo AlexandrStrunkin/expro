@@ -60,31 +60,37 @@
                 <input type="hidden" name="form" value="regForm">    
                 <input type="hidden" id="newDealer" value="Y" name="newDealer">               
                 <label class="left">
-                    <input type="text" class="req input" placeholder="Введите название вашей организации" value="" name="NEW_NAME" autocomplete="off"/><span class="i">*</span>
+                    <input type="text" class="req input" placeholder="Введите название вашей организации" value="" name="NEW_NAME" autocomplete="off"/>
+                    <span class="i">*</span>
                 </label>
                 <label class="right">
-                    <input type="text" class="req input" placeholder="Юридический адрес" value="" name="NEW_LEGAL_ADDRESS" autocomplete="off"/><span class="i">*</span>
+                    <input type="text" class="req input" placeholder="Юридический адрес" value="" name="NEW_LEGAL_ADDRESS" autocomplete="off"/>
+                    <span class="i">*</span>
                 </label>
                 <label class="center">
                     <input type="text" class="input" placeholder="Введите банковские ревкизиты вашей организации" value="" name="NEW_BANK_PROPS" autocomplete="off"/>
                 </label>
                 <label class="left">
-                    <input type="text" class="req input" placeholder="Фактический адрес" value="" name="NEW_FACT_ADDRESS" autocomplete="off"/><span class="i">*</span>
+                    <input type="text" class="req input" placeholder="Фактический адрес" value="" name="NEW_FACT_ADDRESS" autocomplete="off"/>
+                    <span class="i">*</span>
                 </label>
                 <label class="right">
-                    <input type="text" class="req input" placeholder="Адрес склада (при наличии)" value="" name="NEW_WAREHOUSE" autocomplete="off"/>
+                    <input type="text" class="input" placeholder="Адрес склада (при наличии)" value="" name="NEW_WAREHOUSE" autocomplete="off"/>
                 </label>
                 <label class="left">
-                    <input type="text" class="input" placeholder="Адрес сайта" value="" name="NEW_SITE" autocomplete="off"/><span class="i">*</span>
+                    <input type="text" class="input" placeholder="Адрес сайта" value="" name="NEW_SITE" autocomplete="off"/>
                 </label>
                 <label class="right">
-                    <input type="text" class="req input" placeholder="ФИО контактного лица" value="" name="NEW_FIO" autocomplete="off"/><span class="i">*</span>
+                    <input type="text" class="req input" placeholder="ФИО контактного лица" value="" name="NEW_FIO" autocomplete="off"/>
+                    <span class="i">*</span>
                 </label>
                 <label class="left">
-                    <input type="text" class="phone input" placeholder="Телефон контактного лица для связи" value="" name="NEW_PHONE" autocomplete="off"/><span class="i">*</span>
+                    <input type="text" class="req phone input" placeholder="Телефон контактного лица для связи" value="" name="NEW_PHONE" autocomplete="off"/>
+                    <span class="i">*</span>
                 </label>
                 <label class="right">
-                    <input type="text" class="req input" placeholder="E-mail контактного лица для связи" value="" name="NEW_EMAIL" autocomplete="off"/><span class="i">*</span>
+                    <input type="text" class="req input" placeholder="E-mail контактного лица для связи" value="" name="NEW_EMAIL" autocomplete="off"/>
+                    <span class="i">*</span>
                 </label>
                 <div class="mes">Отмеченные поля, обязательны для заполнения</div>
                 <button type="button" class="submit" onclick="personalFormSubmit('regForm'); yaCounter32903175.reachGoal('REGISTRACIYA'); ga('send', 'event', 'Button', 'Click', 'REGISTRACIYA');">Отправить</button>
