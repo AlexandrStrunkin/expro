@@ -30,7 +30,7 @@
             var center = {lat: <?=$arResult["ITEMS"][0]["PROPERTIES"]["COORDS_LAT"]["VALUE"]?>, lng: <?=$arResult["ITEMS"][0]["PROPERTIES"]["COORDS_LNG"]["VALUE"]?>} //300004, Тула, улица Марата, 79
 
             //карта с настройками
-            var zoom = 15;
+            var zoom = 14;
             var map = new google.maps.Map(document.getElementById('map'), {
                 scrollwheel: false,
                 zoom: zoom,
