@@ -98,7 +98,8 @@
             </p>
         </div>
         <div class="footer_link">
-            <span>Создание сайта — <a href="http://webgk.ru" target="_blank">компания WebGK</a></span>
+			<span>Создание сайта — <a href="http://webgk.ru" target="_blank">компания WebGK</a></span><br />
+			<span>Продвижение сайта — <a href="http://alaev.co" target="_blank">АлаичЪ и Ко</a></span>
         </div>
     </div>
 
