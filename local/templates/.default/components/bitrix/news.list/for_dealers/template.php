@@ -54,7 +54,7 @@
         <div class="become-dealer-block2">
             <h3>Оформление заявки</h3>
 
-            <form action="#" method="post" class="allform" id="regForm">
+            <form action="#" method="post" class="allform" id="regForm" onsubmit="yaCounter32903175.reachGoal('REGISTRACIYA');return false;">
                 <div class="form_error"></div>
                 <div class="form_success">Ваша заявка отправлена. Мы обязательно свяжемся с вами! Спасибо!</div>
                 <input type="hidden" name="form" value="regForm">    
@@ -93,7 +93,7 @@
                     <span class="i">*</span>
                 </label>
                 <div class="mes">Отмеченные поля, обязательны для заполнения</div>
-                <button type="button" class="submit" onclick="personalFormSubmit('regForm'); yaCounter32903175.reachGoal('REGISTRACIYA'); ga('send', 'event', 'Button', 'Click', 'REGISTRACIYA');">Отправить</button>
+                <button type="submit" class="submit" onclick="personalFormSubmit('regForm'); yaCounter32903175.reachGoal('REGISTRACIYA'); ga('send', 'event', 'Button', 'Click', 'REGISTRACIYA');">Отправить</button>
                 <button type="reset" class="reset">Очистить</button>
             </form>
         </div>

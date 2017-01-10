@@ -129,7 +129,7 @@
     <div id="reg-popup" class="popupForm">
         <span class="h2">Регистрация</span>
 
-        <form action="#" method="post" class="allform" id="regForm">
+        <form action="#" method="post" class="allform" id="regForm" onsubmit="yaCounter32903175.reachGoal('REGISTRACIYA');return false;">
             <div class="form-container">
                 <h3>Выберите тип дилера</h3>
                 <div class="dealer-link new active">
@@ -169,7 +169,7 @@
             <div class="btn-container">
                 <div class="mes">Отмеченные поля, являются обязательными для заполнения.</div>
                 <button type="reset" class="reset">очистить</button>
-                <button type="button" class="submit" onclick="personalFormSubmit('regForm'); yaCounter32903175.reachGoal('REGISTRACIYA'); ga('send', 'event', 'Button', 'Click', 'REGISTRACIYA');">отправить</button>
+                <button type="submit" class="submit" onclick="personalFormSubmit('regForm'); yaCounter32903175.reachGoal('REGISTRACIYA'); ga('send', 'event', 'Button', 'Click', 'REGISTRACIYA');">отправить</button>
             </div>
         </form>
 
@@ -179,7 +179,7 @@
 
     <div id="order-project" class="popupForm">
         <span class="h2">Заказать проект</span>
-        <form action="#" method="post" class="allform" id="orderProject">
+        <form action="#" method="post" class="allform" id="orderProject" onsubmit="yaCounter32903175.reachGoal('PROEKT');return false;">
             <input type="hidden" name="form" value="orderProject">
             <div class="form_error">Заполните все поля!</div>
             <div class="form_success">Ваша заявка отправлена. Мы обязательно свяжемся с вами! Спасибо!</div>
@@ -190,7 +190,7 @@
             <label><input type="text" class="req input" placeholder="*Email контактного лица" value="" name="EMAIL" autocomplete="off"/></label>
 
             <div class="btn-container">
-                <button type="button" class="submit" onclick="personalFormSubmit('orderProject'); yaCounter32903175.reachGoal('PROEKT'); ga('send', 'event', 'Button', 'Click', 'PROEKT');">Заказать</button>
+                <button type="submit" class="submit" onclick="personalFormSubmit('orderProject'); yaCounter32903175.reachGoal('PROEKT'); ga('send', 'event', 'Button', 'Click', 'PROEKT');">Заказать</button>
             </div>
         </form>
     </div>
@@ -198,7 +198,7 @@
 
     <div id="order-call" class="popupForm">
         <span class="h2">Заказать обратный звонок</span>
-        <form action="#" method="post" class="allform" id="orderCall">
+        <form action="#" method="post" class="allform" id="orderCall" onsubmit="yaCounter32903175.reachGoal('ZVONOK');return false;">
             <input type="hidden" name="form" value="orderCall">
             <div class="form_error">Заполните все поля!</div>
             <div class="form_success">Ваша заявка отправлена. Мы обязательно свяжемся с вами! Спасибо!</div>
@@ -206,7 +206,7 @@
             <label><input type="text" class="req input phone" placeholder="*Ваш телефон" value="" name="PHONE" autocomplete="off"/></label>
             <label><textarea placeholder="Ваши комментарии или вопросы" name="COMMENT" autocomplete="off"></textarea></label>
             <div class="btn-container">
-                <button type="button" class="submit" onclick="personalFormSubmit('orderCall'); yaCounter32903175.reachGoal('ZVONOK'); ga('send', 'event', 'Button', 'Click', 'ZVONOK');">Заказать</button>
+                <button type="submit" class="submit" onclick="personalFormSubmit('orderCall'); yaCounter32903175.reachGoal('ZVONOK'); ga('send', 'event', 'Button', 'Click', 'ZVONOK');">Заказать</button>
             </div>
         </form>
     </div>
@@ -214,7 +214,7 @@
 
     <div id="get-opp-price" class="popupForm">
         <span class="h2">Узнать оптовую цену</span>
-        <form action="#" method="post" class="allform" id="getOptPrice">
+        <form action="#" method="post" class="allform" id="getOptPrice" onsubmit="yaCounter32903175.reachGoal('UZNAT_CENU');return false;">
             <input type="hidden" name="form" value="getOptPrice">
             <div class="form_error">Заполните все поля!</div>
             <div class="form_success">Ваша заявка отправлена. Мы обязательно свяжемся с вами! Спасибо!</div>
@@ -225,7 +225,7 @@
             <label><input type="text" class="req input" placeholder="*Ваш Email" value="" name="EMAIL" autocomplete="off"/></label>
 
             <div class="btn-container">
-                <button type="button" class="submit" onclick="personalFormSubmit('getOptPrice'); yaCounter32903175.reachGoal('UZNAT_CENU'); ga('send', 'event', 'Button', 'Click', 'UZNAT_CENU');">Отправить</button>
+                <button type="submit" class="submit" onclick="personalFormSubmit('getOptPrice'); yaCounter32903175.reachGoal('UZNAT_CENU'); ga('send', 'event', 'Button', 'Click', 'UZNAT_CENU');">Отправить</button>
             </div>
         </form>
     </div>
