@@ -3,8 +3,7 @@
     $ID = intval($_POST["ID"]);
 
     $section = CIBlockSection::GetList(array(),array("IBLOCK_ID"=>6,"ID"=>$ID),true,array("UF_*"));
-    $arSection = $section->Fetch();
-    //arshow($arSection);
+    $arSection = $section->Fetch();   
     if ($arSection["IBLOCK_SECTION_ID"] > 0) {
         $arParent = CIBlockSection::GetById($arSection["IBLOCK_SECTION_ID"])->Fetch();
     }

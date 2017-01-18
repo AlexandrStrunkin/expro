@@ -3917,10 +3917,56 @@ font-family: 'AngleciaProDisplayItalic';
     }
 }
 /***********login-popup***************/
+.blurBackground {   
+    width: auto;
+    height: auto;                    
+    background: rgba(229, 229, 229, 0.85);
+    position: fixed;
+    bottom: 0;
+    right: 0;           
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    display: none;
+    z-index: 9010;                       
+}
+
 .popupForm {
-    width: 520px;
-    /*padding: 30px;*/
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -260px;  
+    width: 520px;       
     background: #fff;
+    display: none;
+    z-index: 9012;
+}
+
+.popupForm#order-project { 
+    margin-top: -330px;
+}
+.popupForm#login-popup { 
+    margin-top: -190px;
+}
+.popupForm#order-call { 
+    margin-top: -260px;
+}
+.popupForm#reg-popup {
+    margin-left: -520px;
+    margin-top: -480px;
+}
+
+.popupCloseButton {
+    display: block;
+    top: 35px;
+    right: 31px;
+    background: url(/css/fancybox/close.png);
+    background-size: 100%;    
+    position: absolute;   
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    z-index: 9040;                                          
 }
 .popupForm span.h2 {
     font: 32px/1 "Circe-Bold", sans-serif;
@@ -3930,7 +3976,7 @@ font-family: 'AngleciaProDisplayItalic';
     letter-spacing: 0.1px;
     border-bottom: 1px solid #ccc;
     display:block;
-    overflow:hidden
+    overflow:hidden;
 }
 .popupForm label {
     display: block;
