@@ -319,7 +319,6 @@ $(document).ready(function () {
 
     /***************login popup****************************/
     $(".login-popup-link, .reg-popup-link").on("click", function(e){
-        console.log(e.target.hash);
         var targetForm = e.target.hash; 
         $(targetForm).fadeIn();
         $(".blurBackground").fadeIn();            
