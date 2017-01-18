@@ -151,7 +151,7 @@ function setSlider($_this) {
 // -----------------------------------------
 
 function sliderCreate($_this) {
-    // открытие слайдера цвета
+    // РѕС‚РєСЂС‹С‚РёРµ СЃР»Р°Р№РґРµСЂР° С†РІРµС‚Р°
     $_this.find('.color_slider').addClass('flex_active');
     $_this.find('.btn_color').addClass('close');
     $_this.find('.slides li').not('.slides li:nth-child(1)').stop(true, true);
@@ -171,7 +171,7 @@ function sliderCreate($_this) {
 // -----------------------------------------
 
 function sliderDestroy($_this) {
-    // закрытие слайдера цвета
+    // Р·Р°РєСЂС‹С‚РёРµ СЃР»Р°Р№РґРµСЂР° С†РІРµС‚Р°
     $_this.find('.btn_color').removeClass('close');
     if ($_this.find('.slides li').length > sliderArr[sliderMode].count) {
         $_this.find('.slides li').not('.slides li:nth-child(1)').animate({'margin-left': '-' + sliderArr[sliderMode].itemWidthHalf + 'px'}, 500, function () {
@@ -241,7 +241,7 @@ $(document).ready(function () {
     /****************page news******************/
     var subStr = function(elT, title, rows){
         var j, h, newH, line = 0, lineArr = [], k = 0;
-        //обрезка строки
+        //РѕР±СЂРµР·РєР° СЃС‚СЂРѕРєРё
         if (!title) return;
         elT.html("");
         h = 0;
@@ -249,7 +249,7 @@ $(document).ready(function () {
         lineArr[0] = title;
         var wordsAll = title.split(' '), words = [];
         for (j = 0; j < wordsAll.length; j = j + 1) {
-            if (wordsAll[j] !== "" && wordsAll[j] !== " " && wordsAll[j] !== "↵")
+            if (wordsAll[j] !== "" && wordsAll[j] !== " " && wordsAll[j] !== "в†µ")
                 words.push(wordsAll[j]);
         }
 
@@ -281,7 +281,7 @@ $(document).ready(function () {
     var newsDataT = [], newsDataD = [], newsDataT1 = [];
     $(".page-news").css("opacity", "0");
     $(".page-news .item_info__title").each(function () {
-      //  newsDataT.push($(this).text());   //закомментировал 07.09.15
+      //  newsDataT.push($(this).text());   //Р·Р°РєРѕРјРјРµРЅС‚РёСЂРѕРІР°Р» 07.09.15
     });
     $(".page-news .item_info__description").each(function () {
         newsDataD.push($(this).text());
@@ -318,7 +318,18 @@ $(document).ready(function () {
     });
 
     /***************login popup****************************/
-    $(".login-popup-link").fancybox({padding: 0,
+    $(".login-popup-link, .reg-popup-link").on("click", function(e){
+        console.log(e.target.hash);
+        var targetForm = e.target.hash; 
+        $(targetForm).fadeIn();
+        $(".blurBackground").fadeIn();            
+    });
+    $(".popupCloseButton, .blurBackground").on("click", function(){
+        $(".popupForm").fadeOut();
+        $(".blurBackground").fadeOut();            
+    });
+    
+    /*$(".login-popup-link").fancybox({padding: 0,
         afterLoad:function(){
             $(".fancybox-overlay").addClass("fancybox-gray");
             $(".wrapper").addClass("fancybox-blur");
@@ -352,7 +363,7 @@ $(document).ready(function () {
 
             //  $("body").css("overflow", "auto");
         }
-    });
+    });   */
     // $(".login-popup-link").click();
     // $(".reg-popup-link").click();
 
@@ -389,7 +400,7 @@ $(document).ready(function () {
     $(".tabs a.active").click();
 
     /************************************/
-    //страница catalog-seria.html
+    //СЃС‚СЂР°РЅРёС†Р° catalog-seria.html
     $(".catalog-seria .preview img").load(catalogSeria);
 
     var clf = function(){
@@ -412,7 +423,7 @@ $(document).ready(function () {
         $(arrA[i]).hide();
     }
 
-    if (arrA.length > 6) { //(6 потому что 5 картинок и кнопка more) и кнопку more всегда выводить в конце, скриптом скроется если эл-тов <=5
+    if (arrA.length > 6) { //(6 РїРѕС‚РѕРјСѓ С‡С‚Рѕ 5 РєР°СЂС‚РёРЅРѕРє Рё РєРЅРѕРїРєР° more) Рё РєРЅРѕРїРєСѓ more РІСЃРµРіРґР° РІС‹РІРѕРґРёС‚СЊ РІ РєРѕРЅС†Рµ, СЃРєСЂРёРїС‚РѕРј СЃРєСЂРѕРµС‚СЃСЏ РµСЃР»Рё СЌР»-С‚РѕРІ <=5
         more1.show(); $(arrA[4]).hide();
     } else more1.remove();
 
@@ -526,11 +537,11 @@ $(document).ready(function () {
 
         t1 = setTimeout(function(){
             data = [
-                {img: "files/color_04.png", name: "Дуб состаренный"},
-                {img: "files/color_02.png", name: "Мокко и Джара Госфорт"},
-                {img: "files/color_05.png", name: "Орех Вирджиния"},
-                {img: "files/color_01.png", name: "Дуб Верцаска Карамель"},
-                {img: "files/color_04.png", name: "Дуб состаренный"}
+                {img: "files/color_04.png", name: "Р”СѓР± СЃРѕСЃС‚Р°СЂРµРЅРЅС‹Р№"},
+                {img: "files/color_02.png", name: "РњРѕРєРєРѕ Рё Р”Р¶Р°СЂР° Р“РѕСЃС„РѕСЂС‚"},
+                {img: "files/color_05.png", name: "РћСЂРµС… Р’РёСЂРґР¶РёРЅРёСЏ"},
+                {img: "files/color_01.png", name: "Р”СѓР± Р’РµСЂС†Р°СЃРєР° РљР°СЂР°РјРµР»СЊ"},
+                {img: "files/color_04.png", name: "Р”СѓР± СЃРѕСЃС‚Р°СЂРµРЅРЅС‹Р№"}
             ];
             for(i = 0; i < 5; i++) {
                 if (!data[i]) continue;
@@ -559,7 +570,7 @@ $(document).ready(function () {
 
 
     /************************************/
-    //страница catalog-table.html
+    //СЃС‚СЂР°РЅРёС†Р° catalog-table.html
     $(".catalog_wrapper_top_link").click(function () {
         var href = $(this).attr("href");
         $('html, body').animate({
@@ -588,7 +599,7 @@ $(document).ready(function () {
         table.find("tr").each(function () {
             var elT = $(this).find(".title"), title = data[i].title || $(this).text(),
             j, h, newH, line = 0, lineArr = [], k = 0;
-            //обрезка строки (если строк больше 2х)
+            //РѕР±СЂРµР·РєР° СЃС‚СЂРѕРєРё (РµСЃР»Рё СЃС‚СЂРѕРє Р±РѕР»СЊС€Рµ 2С…)
             if (!title) return;
             elT.html("");
             h = 0;
@@ -624,7 +635,7 @@ $(document).ready(function () {
     $(window).resize(function(){
         substrTitle();
     });
-    //сортировка в таблице
+    //СЃРѕСЂС‚РёСЂРѕРІРєР° РІ С‚Р°Р±Р»РёС†Рµ
     $(".sort-name-link").click(function () {
         var el = $(this);
         if (el.hasClass("desc")) {
@@ -658,7 +669,7 @@ $(document).ready(function () {
 
     sliderMode = getSliderMode();
 
-    // подключение слайдеров
+    // РїРѕРґРєР»СЋС‡РµРЅРёРµ СЃР»Р°Р№РґРµСЂРѕРІ
     $('.slider').flexslider({
         animation: 'fade',
         directionNav: false,
@@ -706,7 +717,7 @@ $(document).ready(function () {
 
     });
     */
-    // подключение fancybox
+    // РїРѕРґРєР»СЋС‡РµРЅРёРµ fancybox
     var animated = false, slider;
     $('.fancy').fancybox({
         autoCenter: true,
@@ -737,13 +748,13 @@ $(document).ready(function () {
 
 
     });
-    // маска ввода для телефона
+    // РјР°СЃРєР° РІРІРѕРґР° РґР»СЏ С‚РµР»РµС„РѕРЅР°
     $('.phone').mask("+7 (999) 999-99-99", {placeholder: "_"});
 
-    // подключение кастомных инпутов
+    // РїРѕРґРєР»СЋС‡РµРЅРёРµ РєР°СЃС‚РѕРјРЅС‹С… РёРЅРїСѓС‚РѕРІ
     $('.catalog_filter').fancyfields();
 
-    // Валидация формы
+    // Р’Р°Р»РёРґР°С†РёСЏ С„РѕСЂРјС‹
     $('.allform').each(function () {  /*
         $(this).unbind('submit').on('submit', function (e) {
         var emailPattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
@@ -847,7 +858,7 @@ $(window).resize(function () {
 
 
     /************************************/
-    //страница catalog-seria.html
+    //СЃС‚СЂР°РЅРёС†Р° catalog-seria.html
     catalogSeria();
 
 

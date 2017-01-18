@@ -85,8 +85,16 @@ function loadSection(ID) {
         $("#catalog-window").html(data);
 
         //реинициализация fancybox
-
-        $(".login-popup-link").fancybox({padding: 0,
+        $(".login-popup-link, .reg-popup-link").on("click", function(e){
+            var targetForm = e.target.hash; 
+            $(targetForm).fadeIn();
+            $(".blurBackground").fadeIn();            
+        });
+        $(".popupCloseButton, .blurBackground").on("click", function(){
+            $(".popupForm").fadeOut();
+            $(".blurBackground").fadeOut();            
+        });
+        /*$(".login-popup-link").fancybox({padding: 0,
             afterLoad:function(){
                 $(".fancybox-overlay").addClass("fancybox-gray");
                 $(".wrapper").addClass("fancybox-blur");
@@ -99,7 +107,7 @@ function loadSection(ID) {
                 $(".wrapper").removeClass("fancybox-blur");
                 $("body").css("overflow", "auto");
             }
-        });
+        }); */
 
         ////
 
