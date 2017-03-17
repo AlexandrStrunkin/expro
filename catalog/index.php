@@ -2,7 +2,7 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("description", "В нашем каталоге для вас откроется широкий ассортимент качественной офисной мебели по адекватным ценам.");
 $APPLICATION->SetPageProperty("keywords", "каталог, офисная мебель");
-$APPLICATION->SetPageProperty("title", "Каталог офисной мебели российского производства - фабрика Экспро");
+$APPLICATION->SetPageProperty("title", "Каталог офисной мебели российского производства - фабрика Экспро Грейд");
 $APPLICATION->SetTitle("Каталог офисной мебели");
 $filterView = (COption::GetOptionString("main", "wizard_template_id", "eshop_adapt_horizontal", SITE_ID) == "eshop_adapt_vertical" ? "HORIZONTAL" : "VERTICAL");
 ?>

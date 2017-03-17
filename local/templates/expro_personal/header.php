@@ -4,10 +4,16 @@
     CUtil::InitJSCore();
     CJSCore::Init(array("fx"));
     $curPage = $APPLICATION->GetCurPage(true);
+
+	if($_SERVER["HTTP_HOST"] ==  "expro.ru"){
+		$directory = $APPLICATION->GetCurDir();
+	}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=LANGUAGE_ID?>" lang="<?=LANGUAGE_ID?>" class="no-js">
 <head>
+	<?if($directory){?><link rel="canonical" href="http://expro-mebel.ru<?=$directory?>" />
+    <?}?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
     <link rel="shortcut icon" type="image/x-icon" href="<?=SITE_DIR?>favicon.ico" />

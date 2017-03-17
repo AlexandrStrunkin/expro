@@ -9,3 +9,4 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="/js/noCopyScript.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLWl3RW0SyI1y0ie3fFpmIuxmbmBhg70k&callback=initMap" type="text/javascript"></script>

@@ -12,7 +12,6 @@
 <script src="/js/jquery.mousewheel.js"></script>
 <script src="/js/jquery.jscrollpane.min.js"></script>
 <script src="/js/sortTable.v2.1.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 
 <script src="/js/main.js"></script>
 

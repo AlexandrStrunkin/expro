@@ -1,7 +1,8 @@
-<?$arTemplate = array(
-	"NAME" => "Expro - внутренн€€ страница",
-	"DESCRIPTION" => "",
-	"SORT" => "",
-	"TYPE" => "",
+<?
+$arTemplate = array (
+  'NAME' => 'Expro - внутренн€€ страница',
+  'DESCRIPTION' => '',
+  'SORT' => '',
+  'TYPE' => '',
 );
 ?>
