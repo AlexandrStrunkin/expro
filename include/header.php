@@ -140,7 +140,7 @@
             </div>
         </div>
     </div>     
-    <a href="http://market.expro-mebel.ru">   
+    <a href="http://expro-mebel.ru">   
         <div class="logotype">            
                 <?$APPLICATION->IncludeFile(SITE_DIR."include/name.php",Array(), Array("MODE"=>"html"));?>        
         </div> 
