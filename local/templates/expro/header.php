@@ -167,7 +167,7 @@
 </div>
 
 <div class="tile_wrapper two">
-    <div class="tile_wrapper__item">
+    <div class="tile_wrapper__item hidden_block">
         <div class="tile_wrapper__item__wrapper_for_text">
             <span>
                 <?$APPLICATION->IncludeFile(SITE_DIR."include/main_block5_text1.php",Array(), Array("MODE"=>"html"));?>  
@@ -178,7 +178,7 @@
         </div>        
     </div>
 
-    <div class="tile_wrapper__item">
+    <div class="tile_wrapper__item hidden_block">
         <?$APPLICATION->IncludeFile(SITE_DIR."include/main_block6_img.php",Array(), Array("MODE"=>"html"));?>
     </div>
 
