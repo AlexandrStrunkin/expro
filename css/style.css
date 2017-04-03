@@ -194,14 +194,14 @@ textarea {
 }
 
 .logotype {
-    margin: -73px auto 49px;
+    margin: -68px auto 49px;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     font: 32px/33px 'GothamProBold';
     position:relative;
     z-index:1;
-    width: 300px;
+    width: 160px;
 }
 
 .logotype img {

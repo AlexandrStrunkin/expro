@@ -1,1 +1,1 @@
-<img src="/img/logo.png">
+<img src="/img/expro_logo2.png">

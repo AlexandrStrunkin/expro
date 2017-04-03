@@ -111,12 +111,12 @@
             <div class="header__wrapper__buttons" >
 
                 <div class="private_office1 btn_ico"><a href="/personal/"  style="width:130px"><?=htmlspecialcharsbx($name)?></a> <a class="logout" href="?logout=yes">Выйти</a></div>
-                <a class="client" href="http://market.expro.ru">Для розничных покупателей</a>
+                <a class="client" href="http://market.expro-mebel.ru">Для розничных покупателей</a>
             </div>
             <?} else {?>
             <div class="header__wrapper__buttons">
                 <a href="#login-popup" class="private_office2 btn_ico login-popup-link" >Войти</a>
-                <a class="client" href="http://market.expro.ru">Для розничных покупателей</a>
+                <a class="client" href="http://market.expro-mebel.ru">Для розничных покупателей</a>
             </div>
             <?}?>
 
@@ -139,12 +139,12 @@
                 <a href="#">EN</a>-->
             </div>
         </div>
-    </div>
-    <div class="logotype">
-        <a href="/">
-            <?$APPLICATION->IncludeFile(SITE_DIR."include/name.php",Array(), Array("MODE"=>"html"));?>
-        </a>
-    </div>
+    </div>     
+    <a href="http://market.expro-mebel.ru">   
+        <div class="logotype">            
+                <?$APPLICATION->IncludeFile(SITE_DIR."include/name.php",Array(), Array("MODE"=>"html"));?>        
+        </div> 
+    </a>       
 
     <div class="clearboth"></div>
 
