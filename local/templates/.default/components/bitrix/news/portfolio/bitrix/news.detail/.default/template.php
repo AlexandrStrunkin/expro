@@ -82,13 +82,13 @@
 
                 <?if ($description != "") {?>
                     <h3>Особенности</h3>
-                    <div class="">
+                    <div class="portfolio_description">
                         <?=$description?>
                     </div>
                     <?}?>
                     
                     <a class="orderProject login-popup-link" type="button" href="#order-project">Заказать проект</a>
-            </div>
+            </div>       
             <!--END area2-->
             
         </div>
