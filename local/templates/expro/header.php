@@ -194,3 +194,7 @@
         </div>
     </div>
 </div>
+
+<div class="info-block">
+	<?$APPLICATION->IncludeFile(SITE_DIR."include/index_bottom_text.php",Array(), Array("MODE"=>"html"));?>
+</div>
