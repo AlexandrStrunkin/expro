@@ -87,13 +87,13 @@ function loadSection(ID) {
         //реинициализация fancybox
         $(".login-popup-link, .reg-popup-link").on("click", function(e){
             e.preventDefault();
-            var targetForm = e.target.hash; 
+            var targetForm = e.target.hash;
             $(targetForm).fadeIn();
-            $(".blurBackground").fadeIn();            
+            $(".blurBackground").fadeIn();
         });
         $(".popupCloseButton, .blurBackground").on("click", function(){
             $(".popupForm").fadeOut();
-            $(".blurBackground").fadeOut();            
+            $(".blurBackground").fadeOut();
         });
         /*$(".login-popup-link").fancybox({padding: 0,
             afterLoad:function(){
@@ -339,7 +339,8 @@ function personalFormSubmit(form) {
 
             $.post("/ajax/checkForm.php",{email:email,pass:pass,form:form},function(data){
                 if (data == "OK") {
-                    document.location.reload();
+                    //document.location.reload();
+                    document.location.href = "/personal/";
                 }
                 else {
                     $("#" + form + " .form_error").css("display","block").html("Неверный логин или пароль!");
