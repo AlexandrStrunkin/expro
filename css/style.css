@@ -194,18 +194,18 @@ textarea {
 }
 
 .logotype {
-    margin: -68px auto 49px;
+    margin: -95px auto 49px;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     font: 32px/33px 'GothamProBold';
     position:relative;
     z-index:1;
-    width: 160px;
+    width: 310px;
 }
 
 .logotype img {
-    width:150px;
+    width: 300px;
 }
 
 .logotype a:hover {
@@ -2505,6 +2505,11 @@ font-family: 'AngleciaProDisplayItalic';
     padding: 0 0 13px 20px;
     color: #726355;
 }
+.seriaDescription ul li{
+    background: url(/img/list.png) no-repeat 0 8px;
+    padding: 0 0 3px 20px;
+    color: #726355;
+}
 .info-block .slider {
     overflow: visible;
 }
@@ -3917,38 +3922,38 @@ font-family: 'AngleciaProDisplayItalic';
     }
 }
 /***********login-popup***************/
-.blurBackground {   
+.blurBackground {
     width: auto;
-    height: auto;                    
+    height: auto;
     background: rgba(229, 229, 229, 0.85);
     position: fixed;
     bottom: 0;
-    right: 0;           
+    right: 0;
     top: 0;
     left: 0;
     overflow: hidden;
     display: none;
-    z-index: 9010;                       
+    z-index: 9010;
 }
 
 .popupForm {
     position:fixed;
     top: 50%;
     left: 50%;
-    margin-left: -260px;  
-    width: 520px;       
+    margin-left: -260px;
+    width: 520px;
     background: #fff;
     display: none;
     z-index: 9012;
 }
 
-.popupForm#order-project { 
+.popupForm#order-project {
     margin-top: -330px;
 }
-.popupForm#login-popup { 
+.popupForm#login-popup {
     margin-top: -190px;
 }
-.popupForm#order-call { 
+.popupForm#order-call {
     margin-top: -260px;
 }
 .popupForm#reg-popup {
@@ -3961,12 +3966,12 @@ font-family: 'AngleciaProDisplayItalic';
     top: 35px;
     right: 31px;
     background: url(/css/fancybox/close.png);
-    background-size: 100%;    
-    position: absolute;   
+    background-size: 100%;
+    position: absolute;
     width: 35px;
     height: 35px;
     cursor: pointer;
-    z-index: 9040;                                          
+    z-index: 9040;
 }
 .popupForm span.h2 {
     font: 32px/1 "Circe-Bold", sans-serif;

@@ -8,7 +8,7 @@
 	if($_SERVER["HTTP_HOST"] ==  "expro.ru"){
 		$directory = $APPLICATION->GetCurDir();
 	}
-?> 
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=LANGUAGE_ID?>" lang="<?=LANGUAGE_ID?>" class="no-js">
 <head>
@@ -38,8 +38,8 @@
     <meta name="format-detection" content="telephone=no">
 
 
-    <?include($_SERVER["DOCUMENT_ROOT"]."/include/headerStrings.php")?> 
-
+    <?include($_SERVER["DOCUMENT_ROOT"]."/include/headerStrings.php")?>
+<script charset="UTF-8" src="//cdn.sendpulse.com/28edd3380a1c17cf65b137fe96516659/js/push/5561ee5475d7c57266def73279791f2b_1.js" async></script>
 
 </head>
 <body>
@@ -49,36 +49,36 @@
 
 
 
-<div class="wrapper">  
+<div class="wrapper">
 
-<?include($_SERVER["DOCUMENT_ROOT"]."/include/header.php")?> 
+<?include($_SERVER["DOCUMENT_ROOT"]."/include/header.php")?>
 
 <div class="catalog_top_wrapper">
     <div class="catalog_top">
 
-        <?$APPLICATION->IncludeComponent("bitrix:breadcrumb","breadcrumb",array())?>             
+        <?$APPLICATION->IncludeComponent("bitrix:breadcrumb","breadcrumb",array())?>
 
-        <? 
+        <?
             if (!$_SESSION["CATALOG_VIEW"]) {
                 $_SESSION["CATALOG_VIEW"] = "blocks";
-            }          
+            }
 
             if ($_SESSION["CATALOG_VIEW"] == "table"){
             ?>
             <a class="table-view changeView" href="javascript:void(0)" onclick="setCatalogView('blocks')" title="отображать плиткой" style="display: none;"></a>
             <?} else if ($_SESSION["CATALOG_VIEW"] == "blocks"){?>
-            <a class="table-view1 changeView" href="javascript:void(0)" onclick="setCatalogView('table')" title="отображать таблицей" style="display: none;"></a> 
+            <a class="table-view1 changeView" href="javascript:void(0)" onclick="setCatalogView('table')" title="отображать таблицей" style="display: none;"></a>
             <?}?>
 
 
 
-        <h1 class="main_title"> 
+        <h1 class="main_title">
             <?
-                if (stripos($APPLICATION->GetCurPageParam(), "/catalog/")===false) {   
+                if (stripos($APPLICATION->GetCurPageParam(), "/catalog/")===false) {
                     $APPLICATION->ShowTitle();
                 } else {
-                    $APPLICATION->ShowViewContent('elementH1'); 
-                } 
+                    $APPLICATION->ShowViewContent('elementH1');
+                }
             ?>
         </h1>
 

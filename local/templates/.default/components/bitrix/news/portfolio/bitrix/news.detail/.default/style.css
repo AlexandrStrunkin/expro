@@ -64,4 +64,11 @@
 #order-project .submit {
     float: none !important;
     margin:0 auto !important;
-}
+}                    
+.portfolio_description ul li{  
+    list-style-image: url(/img/list.png);
+    padding: 0 0 8px 0px;  
+    display: list-item;     
+    color: #737373; 
+    list-style-position: inside;   
+}         

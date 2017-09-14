@@ -3,6 +3,9 @@
 /** @var @global CMain $APPLICATION */
 use Bitrix\Main\Loader;
 global $APPLICATION;
+
+$APPLICATION->AddHeadString('<link href="http://'.SITE_SERVER_NAME.$arResult['DETAIL_PAGE_URL'].'" rel="canonical" />',true);
+
 if (isset($templateData['TEMPLATE_THEME']))
 {
 	$APPLICATION->SetAdditionalCSS($templateData['TEMPLATE_THEME']);

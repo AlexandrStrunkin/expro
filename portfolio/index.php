@@ -1,5 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("keywords", "Портфолио");
+$APPLICATION->SetPageProperty("description", "Портфолио");
 $APPLICATION->SetTitle("Портфолио");
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
@@ -89,7 +91,7 @@ $APPLICATION->SetTitle("Портфолио");
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",
-			"detail" => "#ELEMENT_ID#/",
+			"detail" => "#ELEMENT_CODE#/",
 		)
 	),
 	false

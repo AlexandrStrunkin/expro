@@ -1,1 +1,1 @@
-<img src="/img/expro_logo2.png">
+<img src="/img/expro_grade_logo.jpg">

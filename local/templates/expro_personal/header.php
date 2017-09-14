@@ -39,6 +39,7 @@
 
 
     <?include($_SERVER["DOCUMENT_ROOT"]."/include/headerStrings.php")?>      
+<script charset="UTF-8" src="//cdn.sendpulse.com/28edd3380a1c17cf65b137fe96516659/js/push/5561ee5475d7c57266def73279791f2b_1.js" async></script>
 
     </head>
     <body>

@@ -33,7 +33,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");*/?>
     <!-- head -->
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Expro</title>
+        <title>Expro Grade</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <meta name="format-detection" content="telephone=no">
@@ -49,10 +49,10 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");*/?>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
             your browser</a> to improve your experience.</p>
             <![endif]-->
-
+                   
             <div class="page404">
                 <div class="logotype">
-                    <a href="/">Expro</a>
+                    <a href="/"><img src="/img/expro_grade_logo.jpg"></a>
                 </div>
                 <div class="center">
                     <img src="/img/404.png" alt="" />

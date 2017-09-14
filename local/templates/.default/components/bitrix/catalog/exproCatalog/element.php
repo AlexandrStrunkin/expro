@@ -13,6 +13,7 @@
 use Bitrix\Main\Loader;
 use Bitrix\Main\ModuleManager;
 
+
 $this->setFrameMode(true);
 if (isset($arParams['USE_COMMON_SETTINGS_BASKET_POPUP']) && $arParams['USE_COMMON_SETTINGS_BASKET_POPUP'] == 'Y')
 {
@@ -76,6 +77,8 @@ else
 		'CURRENCY_ID' => $arParams['CURRENCY_ID'],
 		'HIDE_NOT_AVAILABLE' => $arParams["HIDE_NOT_AVAILABLE"],
 		'USE_ELEMENT_COUNTER' => $arParams['USE_ELEMENT_COUNTER'],
+
+        'DETAIL_SET_CANONICAL_URL' => $arParams["DETAIL_SET_CANONICAL_URL"],
 
 		'ADD_PICT_PROP' => $arParams['ADD_PICT_PROP'],
 		'LABEL_PROP' => $arParams['LABEL_PROP'],
