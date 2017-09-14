@@ -13,6 +13,7 @@
     $this->setFrameMode(true);
     $templateLibrary = array('popup');
     $currencyList = '';
+
     if (!empty($arResult['CURRENCIES']))
     {
         $templateLibrary[] = 'currency';

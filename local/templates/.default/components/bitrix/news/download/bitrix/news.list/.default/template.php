@@ -12,10 +12,10 @@
         <?
             $active = "";
             if ($i == 0) {
-                $active = "active";  
+                $active = "active";
                 $activeTabID = $s["ID"];
             }
-        ?> 
+        ?>
         <?
            if ($USER->IsAuthorized()){
              $arGroups = CUser::GetUserGroup($USER->GetID());
@@ -25,20 +25,20 @@
                  }elseif($group_id == 9){ // принадлежност пользователя ко 2 группе
                       $group_2_item = $s["UF_GROUP_2"];
                  }elseif($group_id == 10){  // принадлежност пользователя к 3 группе
-                      $group_3_item = $s["UF_GROUP_3"]; 
+                      $group_3_item = $s["UF_GROUP_3"];
                  }elseif($USER->IsAdmin()){
                       $group_1_item = 1;
                       $group_2_item = 1;
                       $group_3_item = 1;
-                 } 
+                 }
              }
-          } 
-          
-          
-          if($group_1_item == 1 or 
+          }
+
+
+          if($group_1_item == 1 or
              $group_2_item == 1 or
              $group_3_item == 1 ){
-          ?> 
+          ?>
         <a href="#tab<?=$s["ID"]?>" class="<?=$active?>"><?=$s["NAME"]?></a>
         <?$i++;
              }?>
@@ -46,13 +46,13 @@
 </div>
 
 
-<?$this->EndViewTarget();?> 
+<?$this->EndViewTarget();?>
 
 
 
 <div class="tabsWrapper">
-     
-            <? 
+
+            <?
             CModule::IncludeModule("iblock");
             $arFilter = array('ACTIVE' => 'Y', 'IBLOCK_ID' => $arResult['IBLOCK_ID'], "ID" => $arResult["TOP_SECTIONS"][$tID]);
                   $dbRes = CIBlockSection::GetList(array('SORT'=>'ASC'), $arFilter, false, Array("UF_GROUP_1"));
@@ -64,8 +64,8 @@
     <?foreach($arResult["ITEMS_BY_SECTIONS"] as $tID=>$arTopSection):?>
 
     <?if ($tID != $activeTabID) {$style= "display:none";} else {$style="";}?>
-    
-        <div class="page-downloads" id="tab<?=$tID?>-content" style="<?=$style?>"> 
+
+        <div class="page-downloads" id="tab<?=$tID?>-content" style="<?=$style?>">
 
             <?
                 $i = 1;
@@ -87,18 +87,18 @@
                          }elseif($group_id == 9){ // принадлежност пользователя ко 2 группе
                               $group_2 = $arResult["TOP_SECTIONS_LEVEL_2"][$sID]["UF_GROUP_2"];
                          }elseif($group_id == 10){  // принадлежност пользователя к 3 группе
-                              $group_3 = $arResult["TOP_SECTIONS_LEVEL_2"][$sID]["UF_GROUP_3"]; 
+                              $group_3 = $arResult["TOP_SECTIONS_LEVEL_2"][$sID]["UF_GROUP_3"];
                          }elseif($USER->IsAdmin()){
                               $group_1 = 1;
                               $group_2 = 1;
                               $group_3 = 1;
                          }
                      }
-                  } 
-                  if($group_1 == 1 or 
+                  }
+                  if($group_1 == 1 or
                      $group_2 == 1 or
                      $group_3 == 1 ){
-                  ?> 
+                  ?>
                         <div class="col<?=$p?>">
                             <h3><?=$arResult["ALL_SECTIONS"][$sID]["NAME"]?></h3>
                             <div>
@@ -113,25 +113,25 @@
                                         $fileLink = CFile::GetPath($arItem["PROPERTIES"]["FILE"]["VALUE"]);
                                         $fileData = CFile::MakeFileArray($arItem["PROPERTIES"]["FILE"]["VALUE"]);
                                     ?>
-                                    <a href="<?=$fileLink?>" class="item" id="<?=$this->GetEditAreaId($arItem['ID']);?>" download title="скачать прайс лист"><span class="text"><?=$arItem["NAME"]?></span><span class="size"><?=round($fileData["size"]/1024/1024,2)?> MB</span></a>
+                                    <a href="<?=$fileLink?>" class="item" id="<?=$this->GetEditAreaId($arItem['ID']);?>" download title="скачать"><span class="text"><?=$arItem["NAME"]?></span><span class="size"><?=round($fileData["size"]/1024/1024,2)?> MB</span></a>
                                     <?}?>
                             </div>
                             <?
                             //ссылка для скачивание прайс листа всего раздела
                             if ($arResult["ALL_SECTIONS"][$sID]["UF_FULL_PRICELIST"] > 0) {
                                 $fullPricePath = CFile::GetPath($arResult["ALL_SECTIONS"][$sID]["UF_FULL_PRICELIST"]);
-                                $fullPriceData = CFile::MakeFileArray($arResult["ALL_SECTIONS"][$sID]["UF_FULL_PRICELIST"]);                             
+                                $fullPriceData = CFile::MakeFileArray($arResult["ALL_SECTIONS"][$sID]["UF_FULL_PRICELIST"]);
                             ?>
                             <a href="<?=$fullPricePath?>" class="all" download title="скачать все"><span class="text">Скачать все</span><span class="size"><?=round($fullPriceData["size"]/1024/1024,2)?> MB</span></a>
                             <?}?>
                         </div>
-               
+
                    <?$i++;}?>
                 <?}?>
 
 
         </div>
 
-        <?endforeach;?> 
+        <?endforeach;?>
     <div class="clearboth"></div>
 </div>

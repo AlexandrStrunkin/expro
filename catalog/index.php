@@ -7,8 +7,8 @@ $APPLICATION->SetTitle("Каталог офисной мебели");
 $filterView = (COption::GetOptionString("main", "wizard_template_id", "eshop_adapt_horizontal", SITE_ID) == "eshop_adapt_vertical" ? "HORIZONTAL" : "VERTICAL");
 ?>
 <?$APPLICATION->IncludeComponent(
-	"bitrix:catalog", 
-	"exproCatalog", 
+	"bitrix:catalog",
+	"exproCatalog",
 	array(
 		"IBLOCK_TYPE" => "catalog",
 		"IBLOCK_ID" => "6",
@@ -242,7 +242,7 @@ $filterView = (COption::GetOptionString("main", "wizard_template_id", "eshop_ada
 		"BIG_DATA_RCM_TYPE" => "bestsell",
 		"COMMON_ADD_TO_BASKET_ACTION" => "ADD",
 		"COMPONENT_TEMPLATE" => "exproCatalog",
-		"DETAIL_SET_CANONICAL_URL" => "N",
+		"DETAIL_SET_CANONICAL_URL" => "Y",
 		"SHOW_DEACTIVATED" => "N",
 		"USE_MAIN_ELEMENT_SECTION" => "Y",
 		"SET_LAST_MODIFIED" => "N",
