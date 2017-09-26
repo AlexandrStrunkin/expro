@@ -933,16 +933,18 @@ $(window).load(function () {
 });
 
 $(window).scroll(function () {
-    var heightScrollTop = $('html,body').scrollTop();
+    var heightScrollTop = $(document).scrollTop();
+    /*
     if ((navigator.sayswho == 'IE 11') || (navigator.sayswho == 'IE 10') || (navigator.sayswho == 'MSIE') || (navigator.sayswho == 'IE') || (navigator.sayswho == 'Firefox')) {
         var heightScrollTop = $('html,body').scrollTop();
     } else {
         var heightScrollTop = $('body').scrollTop();
-    }
+    }*/  
+     
     if ($(".catalog_top").length == 0 ) return;
     if ($(".catalog_top")[0].offsetTop > 0)
         scrollTop = $(".catalog_top")[0].offsetTop;
-
+    console.log(scrollTop + " " + heightScrollTop);
     if (heightScrollTop > scrollTop) {
         $('.wrapper:first').addClass('scrolling').css("padding-top", $(".catalog_top")[0].offsetHeight);
 
