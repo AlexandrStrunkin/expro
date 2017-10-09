@@ -3,6 +3,7 @@
 
     define("INFO_IBLOCK_ID", 25); //инфоблок "информация"  
     define("CATALOG_IBLOCK_ID", 6); //инфоблок "каталог" 
+    define("SEO_TEXT_IBLOCK_ID", 27); //инфоблок сео-тексты 
 
     function arshow($array, $adminCheck = false) {
         global $USER;

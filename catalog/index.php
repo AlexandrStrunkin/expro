@@ -276,7 +276,7 @@ $APPLICATION->IncludeComponent(
     ".default", 
     array(
         "IBLOCK_TYPE" => "content",
-        "IBLOCK_ID" => "27",
+        "IBLOCK_ID" => SEO_TEXT_IBLOCK_ID,
         "COMPONENT_TEMPLATE" => ".default"
     ),
     false
