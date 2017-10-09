@@ -118,7 +118,12 @@ textarea {
     padding: 8px 15px 8px;
     border-radius: 20px;
 }
-
+       
+.seo-text{                                    
+    padding: 0 2.8% 16px 2.8%;
+    background: #efeeec;
+}        
+ 
 .private_office1 {
     display: inline-block;
     background: url(/img/ico_lk.png) 16px 11px no-repeat;

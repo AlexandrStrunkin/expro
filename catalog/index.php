@@ -262,13 +262,7 @@ $filterView = (COption::GetOptionString("main", "wizard_template_id", "eshop_ada
 		)
 	),
 	false
-);?>   
-<style>
-.seo-text{                                    
-    padding: 0 2.8% 16px 2.8%;
-    background: #efeeec;
-}
-</style>   
+);?>      
 <div class="seo-text">
 <?
 $APPLICATION->IncludeComponent(
